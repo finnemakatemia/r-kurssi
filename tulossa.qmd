@@ -1,0 +1,16 @@
+# Päivät 2–5 {#tulossa}
+
+Seuraavien päivien luvut ilmestyvät tähän kirjaan sitä mukaa kuin opetus etenee. Osoite pysyy samana, joten tallenna se kirjanmerkiksi.
+
+| | Aihe |
+|----|----|
+| Päivä 2 | Aineiston siivoaminen, muokkaaminen ja yhdistäminen |
+| Päivä 3 | Aineiston kuvailu ja ryhmien vertailu |
+| Päivä 4 | Usean tekijän huomiointi ja logistinen regressio |
+| Päivä 5 | Koko analyysi alusta loppuun ja päivittyvä raportti |
+
+Sisältö on alustava ja tarkentuu kurssin edetessä.
+
+Jokaiselle päivälle tulee oma aloitussivu, jolta lataat päivän muistikirjan. Uuden päivän tiedosto ei korvaa aiempia: `paiva1.qmd`, `paiva2.qmd` ja niin edelleen ovat samassa kurssikansiossa rinnakkain.
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

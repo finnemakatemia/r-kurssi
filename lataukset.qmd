@@ -1,0 +1,26 @@
+# Lataukset {#lataukset}
+
+Kaikki kurssin tiedostot ovat tällä sivulla. Lataaminen onnistuu selaimella. Et tarvitse GitHub-tunnusta tai terminaalia.
+
+## Päivä 1
+
+-   [paiva1.qmd](lataukset/paiva1.qmd){download="paiva1.qmd"}: päivän muistikirja, jossa on valmiina otsikko, asetukset ja aineiston valmistelu
+
+::: {.content-visible when-meta="julkaistu.paiva1"}
+-   [paiva1-esimerkit.html](lataukset/paiva1-esimerkit.html): opetuksessa käydyt koodit ja tulokset, avautuu selaimessa
+-   [paiva1-esimerkit.qmd](lataukset/paiva1-esimerkit.qmd){download="paiva1-esimerkit.qmd"}: sama muokattavana Quarto-dokumenttina
+:::
+
+
+
+## Näin lataat
+
+1.  Napsauta linkkiä. Tiedosto tallentuu selaimen latauskansioon.
+2.  Siirrä tiedosto kurssikansioosi, esimerkiksi `Documents/r-kurssi`.
+3.  Avaa kurssikansio Positronissa: **File → Open Folder**.
+
+Jos selain avaa tiedoston tekstinä, napsauta linkkiä hiiren oikealla painikkeella ja valitse **Tallenna linkki nimellä**.
+
+Uusi lataus ei korvaa omaa työtäsi, kunhan et tallenna sitä samalla nimellä kuin oman muistikirjasi.
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

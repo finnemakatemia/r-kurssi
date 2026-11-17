@@ -1,0 +1,11 @@
+# Kirjan videot. Lisää arvoksi YouTube-tunniste, videon osoite tai upotuskoodin src-osoite.
+# Tyhjä arvo ("") näyttää luvussa rivin "Luentotallenne lisätään tähän".
+# Muutoksen jälkeen aja: python3 kirja/tyokalut/valmistele.py
+videot:
+  ennakkovideo: "JvSpYSspR2c"
+  paiva1-tyoymparisto: ""
+  paiva1-aineisto: ""
+  paiva1-ensimmainen-kuvaaja: ""
+  paiva1-jakaumat-ja-ryhmat: ""
+  paiva1-viimeistely: ""
+  paiva1-kertaus: ""

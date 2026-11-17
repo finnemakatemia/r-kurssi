@@ -1,0 +1,64 @@
+# Asennukset ja ensimmäinen koodi {#ennen-kurssia}
+
+::: {.tavoitteet}
+-   Asennat R:n ja Positronin.
+-   Asennat kurssin paketit.
+-   Teet ensimmäisen Quarto-dokumentin ja ajat siinä kaksi riviä koodia.
+:::
+
+Tee tämän luvun vaiheet ennen ensimmäistä opetuspäivää. Videon alkuosa kertoo, miksi R kannattaa opetella. Asennukset alkavat noin kohdasta 7:50, ja ne näytetään ruudulla vaihe kerrallaan. Alla on sama tiivistettynä.
+
+{{< kurssivideo ennakkovideo >}}
+
+## Asenna R ja Positron
+
+R on ohjelmointikieli ja ohjelma, joka tekee laskennan. Positron on editori, jossa koodi kirjoitetaan ja tulokset näkyvät. Tarvitset molemmat, ja R asennetaan ensin.
+
+1.  Asenna R osoitteesta [cran.r-project.org](https://cran.r-project.org/). Valitse oma käyttöjärjestelmäsi ja uusin versio.
+2.  Asenna Positron osoitteesta [positron.posit.co](https://positron.posit.co/download.html).
+3.  Avaa Positron. Ikkunan oikeassa yläkulmassa pitäisi näkyä R ja sen versionumero.
+
+::: {.callout-note title="Työkone, johon et saa asentaa ohjelmia"}
+Pyydä asennus oman organisaatiosi tietohallinnolta hyvissä ajoin. Tarvitset R:n, Positronin ja luvan asentaa R-paketteja.
+:::
+
+## Asenna paketit
+
+Paketit ovat R:n laajennuksia. Asennus tehdään kerran. Kirjoita Positronin konsoliin alla oleva rivi ja paina Enter:
+
+``` r
+install.packages(c("tidyverse", "gtsummary", "NHSRdatasets"))
+```
+
+Asennus kestää muutaman minuutin. Konsoliin tulostuu paljon tekstiä, mikä on normaalia. Asennus on valmis, kun konsolin viimeisellä rivillä on taas pelkkä `>`.
+
+## Tee ensimmäinen Quarto-dokumentti
+
+Quarto-dokumentissa teksti, koodi ja tulokset ovat samassa tiedostossa. Koko kurssin koodi kirjoitetaan tällaiseen dokumenttiin.
+
+1.  Valitse **File → New File → Quarto Document**.
+2.  Lisää koodisolu: **Insert Code Cell**.
+3.  Kirjoita soluun:
+
+``` r
+library(NHSRdatasets)
+news <- synthetic_news_data
+```
+
+4.  Paina solun yläreunasta **Run Cell**.
+5.  Tallenna dokumentti omaan kansioonsa, esimerkiksi `Documents/r-kurssi`.
+
+Ensimmäinen rivi ottaa paketin käyttöön. Toinen rivi tallentaa paketin aineiston nimelle `news`. Jos kaikki toimi, Positronin **Variables**-paneeliin ilmestyi `news`, jossa on 1 000 riviä.
+
+## Tarkista ennen ensimmäistä päivää
+
+-   [ ] Positron aukeaa ja näyttää R:n version.
+-   [ ] `library(tidyverse)` konsolissa ei anna virheilmoitusta.
+-   [ ] Variables-paneelissa näkyy `news`, kun olet ajanut solun.
+-   [ ] Tiedät, mihin kansioon tallensit dokumentin.
+
+Jos jokin kohta ei onnistu, ota yhteyttä ennen opetuspäivää. Asennusongelmat on helpompi ratkaista etukäteen kuin tunnilla.
+
+Seuraavaksi: [Päivä 1: aloita tästä](paiva1/index.qmd).
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

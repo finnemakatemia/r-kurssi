@@ -1,0 +1,70 @@
+# Päivä 1: aloita tästä {#paiva1}
+
+::: {.tavoitteet}
+-   Ajat koodia Positronissa konsolissa ja Quarto-dokumentissa.
+-   Katsot, mitä aineistossa on: `glimpse()`, `summary()`, `count()`.
+-   Rakennat kuvaajan osista: aineisto, `aes()` ja geometria.
+-   Viimeistelet kuvan ja tallennat sen.
+:::
+
+## Lataa päivän muistikirja
+
+::: {.lataus}
+[Lataa paiva1.qmd](../lataukset/paiva1.qmd){download="paiva1.qmd"}
+:::
+
+1.  Tallenna tiedosto kurssikansioosi, esimerkiksi `Documents/r-kurssi`.
+2.  Avaa kansio Positronissa: **File → Open Folder**.
+3.  Avaa `paiva1.qmd` ja kirjoita oma nimesi riville `author`.
+4.  Aja ensimmäinen koodisolu: **Run Cell**.
+
+Tiedostossa on valmiina otsikko, asetukset ja aineiston valmistelu. Kaiken muun koodin kirjoitat itse. Et tarvitse GitHub-tunnusta tai terminaalia.
+
+::: {.callout-note collapse="true" title="Selain näyttää tiedoston tekstinä eikä lataa sitä"}
+Napsauta linkkiä hiiren oikealla painikkeella ja valitse **Tallenna linkki nimellä**. Tarkista, että tiedoston pääte on `.qmd` eikä `.txt`.
+:::
+
+## Jos lataus ei onnistu {#valmistelu}
+
+Voit käyttää myös dokumenttia, jonka teit ennakkovideon aikana. Lisää siihen uusi R-solu, kopioi alla oleva koodi soluun kokonaisena ja aja solu. Kopiointipainike on lohkon oikeassa yläkulmassa.
+
+``` r
+# Synteettisen opetusaineiston valmistelu. Muokkaukset opetetaan päivänä 2.
+library(tidyverse)
+
+news <- NHSRdatasets::synthetic_news_data |>
+  mutate(
+    sex = factor(male, levels = 0:1,
+                 labels = c("Female", "Male")),
+    oxygen = factor(sup, levels = 0:1,
+                    labels = c("Room air", "Oxygen")),
+    avpu = factor(alert, levels = 0:3,
+                  labels = c("A", "V", "P", "U")),
+    outcome = factor(died, levels = 0:1,
+                     labels = c("Survived", "Died")),
+    risk = cut(NEWS, breaks = c(-Inf, 4, 6, Inf),
+               labels = c("Low (0-4)", "Medium (5-6)",
+                          "High (7+)"))
+  ) |>
+  select(age, sex, NEWS, risk, resp, sat, oxygen,
+         syst, dias, pulse, temp, avpu, died, outcome)
+```
+
+Lohko lataa tidyverse-paketit ja antaa aineiston luokille selkokieliset nimet, esimerkiksi 0 ja 1 → Female ja Male. Sen jälkeen aineistossa `news` on 1 000 riviä ja 14 saraketta. Miten lohko toimii, käydään läpi päivänä 2.
+
+## Opetuksen jälkeen
+
+::: {.content-visible when-meta="julkaistu.paiva1"}
+Opetuksessa käydyt koodit ja tulokset ovat yhtenä tiedostona:
+
+-   [Lue selaimessa](../lataukset/paiva1-esimerkit.html)
+-   [Lataa muokattava Quarto-dokumentti](../lataukset/paiva1-esimerkit.qmd){download="paiva1-esimerkit.qmd"}
+
+Tallenna kooste eri nimellä kuin oma muistikirjasi, jotta oma työsi säilyy. Päivän luvut ja luentotallenne lisätään kirjaan myöhemmin.
+:::
+
+::: {.content-hidden when-meta="julkaistu.paiva1"}
+Päivän koodit ja tulokset julkaistaan tässä opetuksen jälkeen. Luvut ja luentotallenne lisätään kirjaan myöhemmin.
+:::
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

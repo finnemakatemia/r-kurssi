@@ -1,0 +1,162 @@
+/*-- scss:defaults --*/
+// Käytännönläheinen R kliinikolle: kirjan ulkoasu.
+// Värit ovat samat kuin kurssin dioissa: tumma sininen, turkoosi ja lämmin keltainen.
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap");
+
+$navy: #0B1F33;
+$teal: #0B7A70;
+$teal-lt: #1EC8B7;
+$amber: #FFB454;
+$coral: #E8554E;
+$paper: #F6F8FB;
+$ink: #4A5B6C;
+$line: #DCE3EB;
+
+$body-bg: #ffffff;
+$body-color: #17293B;
+$link-color: $teal;
+$font-family-sans-serif: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+$font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+$font-size-root: 17px;
+$headings-font-weight: 700;
+$headings-color: $navy;
+$code-color: #0B5F7A;
+$code-bg: #EEF3F7;
+$border-radius: 8px;
+
+/*-- scss:rules --*/
+// Leipäteksti antiikvalla, otsikot ja käyttöliittymä groteskilla.
+main.content {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  font-size: 1.09rem;
+  line-height: 1.68;
+}
+main.content h1, main.content h2, main.content h3, main.content h4,
+main.content table, main.content .callout, main.content figcaption,
+main.content .tavoitteet, main.content .harjoitus, main.content .video-tulossa,
+main.content .lataus, main.content .aikajana {
+  font-family: $font-family-sans-serif;
+}
+pre, code { font-variant-ligatures: none; }
+
+// Tunnusviiva sivun yläreunassa
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto 0; height: 4px; z-index: 2000;
+  background: linear-gradient(90deg, $navy 0%, $teal 55%, $teal-lt 78%, $amber 100%);
+}
+
+// Otsikot
+h1.title, .quarto-title h1 {
+  font-size: 2.15rem; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.6rem;
+}
+.quarto-title h1::after, h1.title::after {
+  content: ""; display: block; width: 3.2rem; height: 5px; border-radius: 3px;
+  background: $teal-lt; margin-top: 0.9rem;
+}
+main.content h2 {
+  font-size: 1.45rem; letter-spacing: -0.01em; margin-top: 2.6rem; padding-bottom: 0.3rem;
+  border-bottom: 1px solid $line;
+}
+main.content h3 { font-size: 1.12rem; margin-top: 1.9rem; }
+.quarto-title-meta { font-family: $font-family-sans-serif; font-size: 0.85rem; }
+
+// Sivupalkki
+.sidebar { font-family: $font-family-sans-serif; }
+.sidebar.sidebar-navigation { background: $paper; border-right: 1px solid $line; }
+.sidebar .sidebar-title { font-weight: 700; font-size: 1.02rem; line-height: 1.25; }
+.sidebar .sidebar-title a { color: $navy; }
+.sidebar-item-text.sidebar-link { color: #2E4256; }
+.sidebar-item-section > .sidebar-item-container .sidebar-item-text {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: $ink;
+}
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar-item .sidebar-link.active {
+  color: $teal !important; font-weight: 600;
+}
+div.sidebar-item-container .active { border-left: 3px solid $teal-lt; padding-left: 0.5rem; margin-left: -0.65rem; }
+#TOC, nav#TOC { font-family: $font-family-sans-serif; font-size: 0.82rem; }
+#TOC .nav-link.active { color: $teal !important; border-left-color: $teal-lt !important; }
+
+// Koodi ja tulosteet
+div.sourceCode {
+  background: #F3F6F9; border: 1px solid $line; border-left: 4px solid $navy; border-radius: 6px;
+}
+pre.sourceCode { font-size: 0.86rem; line-height: 1.5; }
+.cell-output pre, .cell-output-stdout pre {
+  font-size: 0.8rem; line-height: 1.45; color: #2E4256; background: #fff;
+  border-left: 3px solid $line; border-radius: 0; padding-left: 0.9rem;
+}
+.cell-output-error pre { border-left-color: $coral; color: #8A2A25; }
+.cell-output-display img, main.content p > img, .quarto-figure img { border-radius: 6px; }
+.cell { margin-bottom: 1.3rem; }
+figcaption, .figure-caption { font-size: 0.82rem; color: $ink; }
+
+// Luvun tavoitteet
+.tavoitteet {
+  background: $paper; border: 1px solid $line; border-radius: 10px;
+  padding: 0.9rem 1.2rem 0.6rem; margin: 1.2rem 0 1.6rem; font-size: 0.93rem;
+}
+.tavoitteet::before {
+  content: "Tässä luvussa"; display: block; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: $teal; margin-bottom: 0.35rem;
+}
+.tavoitteet ul { margin-bottom: 0.3rem; padding-left: 1.15rem; }
+
+// Harjoitus
+.harjoitus {
+  border: 1px solid #F3D9AE; border-left: 6px solid $amber; border-radius: 8px;
+  background: #FFFAF1; padding: 0.8rem 1.1rem 0.5rem; margin: 1.6rem 0; font-size: 0.95rem;
+}
+.harjoitus::before {
+  content: "Harjoitus"; display: block; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: #A66100; margin-bottom: 0.3rem;
+}
+.harjoitus > ol, .harjoitus > ul { padding-left: 1.2rem; margin-bottom: 0.5rem; }
+.harjoitus .callout { margin: 0.5rem 0; }
+
+// Huomautuslaatikot: hillitty, ei varjoja
+.callout { border-radius: 8px !important; box-shadow: none !important; font-size: 0.93rem; }
+.callout.callout-style-default > .callout-header { font-weight: 600; }
+
+// Videot
+.kurssivideo {
+  position: relative; aspect-ratio: 16 / 9; margin: 1.2rem 0 1.8rem; border-radius: 10px;
+  overflow: hidden; background: $navy; box-shadow: 0 6px 22px rgba(11, 31, 51, 0.16);
+}
+.kurssivideo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-tulossa {
+  display: flex; align-items: center; gap: 0.7rem; margin: 1.2rem 0 1.8rem; padding: 0.7rem 1rem;
+  border: 1px dashed #B9C6D3; border-radius: 10px; color: $ink; font-size: 0.88rem; background: $paper;
+}
+.video-tulossa::before {
+  content: "▶"; display: grid; place-items: center; flex: none; width: 2rem; height: 2rem;
+  border-radius: 50%; background: #DCE3EB; color: #fff; font-size: 0.8rem; padding-left: 2px;
+}
+
+// Latauspainike
+.lataus a, a.lataus {
+  display: inline-block; font-family: $font-family-sans-serif; font-weight: 600; text-decoration: none;
+  color: #fff; background: $teal; border-radius: 8px; padding: 0.55rem 1.1rem; margin: 0.3rem 0.4rem 0.6rem 0;
+}
+.lataus a:hover, a.lataus:hover { background: $navy; color: #fff; }
+.lataus a::before, a.lataus::before { content: "↓  "; }
+
+// Etusivun kansi
+.kansi { position: relative; margin: 0 0 1.8rem; border-radius: 14px; overflow: hidden; background: $navy; }
+.kansi img { display: block; width: 100%; max-height: 330px; object-fit: cover; object-position: center 40%; }
+.kansi p { margin: 0; }
+
+// Näppäimet ja taulukot
+kbd, .avain {
+  font-family: $font-family-monospace; font-size: 0.78rem; color: $navy; background: #fff;
+  border: 1px solid #B9C6D3; border-bottom-width: 3px; border-radius: 5px; padding: 0.05rem 0.4rem;
+  box-shadow: none;
+}
+main.content table { font-size: 0.9rem; }
+main.content table thead th { border-bottom: 2px solid $navy; font-weight: 600; }
+
+// Alatunniste ja sivun selaus
+.nav-footer { font-family: $font-family-sans-serif; font-size: 0.8rem; color: $ink; border-top: 1px solid $line; }
+.page-navigation { font-family: $font-family-sans-serif; }
+.page-navigation .nav-page a { border: 1px solid $line; border-radius: 8px; padding: 0.5rem 0.9rem; }
+.page-navigation .nav-page a:hover { border-color: $teal-lt; }

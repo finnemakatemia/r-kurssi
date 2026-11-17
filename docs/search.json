@@ -1,0 +1,327 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Käytännönläheinen R kliinikolle",
+    "section": "",
+    "text": "Tervetuloa\nTämä on kurssin Käytännönläheinen R kliinikolle oppikirja. Kurssi on tehty lääkäreille ja muille kliinikoille, jotka haluavat analysoida oman tutkimusaineistonsa itse. Aiempaa ohjelmointikokemusta ei tarvita.\nKirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaajat ja harjoitukset. Voit käyttää sitä kurssin aikana muistin tukena tai opiskella sen avulla itsenäisesti kurssin jälkeen.",
+    "crumbs": [
+      "Tervetuloa"
+    ]
+  },
+  {
+    "objectID": "index.html#kurssin-rakenne",
+    "href": "index.html#kurssin-rakenne",
+    "title": "Käytännönläheinen R kliinikolle",
+    "section": "Kurssin rakenne",
+    "text": "Kurssin rakenne\n\n\n\n\nAihe\nTila\n\n\n\n\nEnnen kurssia\nAsennukset ja ensimmäinen Quarto-dokumentti\njulkaistu\n\n\nPäivä 1\nTyöympäristö ja kuvaajat (ggplot2)\naloita tästä\n\n\nPäivä 2\nAineiston siivoaminen, muokkaaminen ja yhdistäminen\ntulossa\n\n\nPäivä 3\nAineiston kuvailu ja ryhmien vertailu\ntulossa\n\n\nPäivä 4\nUsean tekijän huomiointi ja logistinen regressio\ntulossa\n\n\nPäivä 5\nKoko analyysi alusta loppuun ja päivittyvä raportti\ntulossa\n\n\n\nJokaisen päivän koodit ja tulokset julkaistaan heti opetuksen jälkeen, luvut ja luentotallenne hieman myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.",
+    "crumbs": [
+      "Tervetuloa"
+    ]
+  },
+  {
+    "objectID": "index.html#näin-käytät-kirjaa",
+    "href": "index.html#näin-käytät-kirjaa",
+    "title": "Käytännönläheinen R kliinikolle",
+    "section": "Näin käytät kirjaa",
+    "text": "Näin käytät kirjaa\n\nKirjoita koodi itse. Lukemalla tunnistat koodin, kirjoittamalla opit tuottamaan sitä. Kopioi vain silloin, kun teksti niin neuvoo.\nTee harjoitukset ennen ratkaisun avaamista. Jokaisessa harjoituksessa on vihje ja malliratkaisu, jotka aukeavat klikkaamalla.\nKatso video, jos teksti ei riitä. Lukujen alussa on luentotallenne, kun se on julkaistu.\nHae. Sivupalkin hakukenttä etsii koko kirjasta, esimerkiksi funktion nimellä.",
+    "crumbs": [
+      "Tervetuloa"
+    ]
+  },
+  {
+    "objectID": "index.html#aineisto",
+    "href": "index.html#aineisto",
+    "title": "Käytännönläheinen R kliinikolle",
+    "section": "Aineisto",
+    "text": "Aineisto\nEsimerkeissä käytetään synteettistä sairaala-aineistoa synthetic_news_data paketista NHSRdatasets. Aineisto on keinotekoinen: siinä ei ole oikeiden potilaiden tietoja, eikä kuvaajista voi tehdä kliinisiä johtopäätöksiä.",
+    "crumbs": [
+      "Tervetuloa"
+    ]
+  },
+  {
+    "objectID": "index.html#tekijä",
+    "href": "index.html#tekijä",
+    "title": "Käytännönläheinen R kliinikolle",
+    "section": "Tekijä",
+    "text": "Tekijä\nAnssi Saviluoto on akuuttilääketieteeseen erikoistuva lääkäri ja entinen ensihoitaja. Hän on tehnyt lääkärihelikopteritoiminnan (HEMS) tutkimusta vuodesta 2018 ja väitellyt vuonna 2021 ensihoitolääkäreiden toimenpidefrekvensseistä. R:n hän on opetellut omaa tutkimustaan varten.\nKurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Tilastollisen menetelmän valintaa käsitellään suppeasti, ja painopiste on menetelmien käytössä R:llä. Kun menetelmän valinta ratkaisee, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa. R-koodi helpottaa tätä yhteistyötä: koodista näkee jokaisen vaiheen, ja tilastotieteilijä voi lukea, korjata ja ajaa saman analyysin.",
+    "crumbs": [
+      "Tervetuloa"
+    ]
+  },
+  {
+    "objectID": "ennen-kurssia.html",
+    "href": "ennen-kurssia.html",
+    "title": "Asennukset ja ensimmäinen koodi",
+    "section": "",
+    "text": "Asenna R ja Positron\nTee tämän luvun vaiheet ennen ensimmäistä opetuspäivää. Videon alkuosa kertoo, miksi R kannattaa opetella. Asennukset alkavat noin kohdasta 7:50, ja ne näytetään ruudulla vaihe kerrallaan. Alla on sama tiivistettynä.\nR on ohjelmointikieli ja ohjelma, joka tekee laskennan. Positron on editori, jossa koodi kirjoitetaan ja tulokset näkyvät. Tarvitset molemmat, ja R asennetaan ensin.",
+    "crumbs": [
+      "Ennen kurssia",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Asennukset ja ensimmäinen koodi</span>"
+    ]
+  },
+  {
+    "objectID": "ennen-kurssia.html#asenna-r-ja-positron",
+    "href": "ennen-kurssia.html#asenna-r-ja-positron",
+    "title": "Asennukset ja ensimmäinen koodi",
+    "section": "",
+    "text": "Asenna R osoitteesta cran.r-project.org. Valitse oma käyttöjärjestelmäsi ja uusin versio.\nAsenna Positron osoitteesta positron.posit.co.\nAvaa Positron. Ikkunan oikeassa yläkulmassa pitäisi näkyä R ja sen versionumero.\n\n\n\n\n\n\n\nHuomautusTyökone, johon et saa asentaa ohjelmia\n\n\n\nPyydä asennus oman organisaatiosi tietohallinnolta hyvissä ajoin. Tarvitset R:n, Positronin ja luvan asentaa R-paketteja.",
+    "crumbs": [
+      "Ennen kurssia",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Asennukset ja ensimmäinen koodi</span>"
+    ]
+  },
+  {
+    "objectID": "ennen-kurssia.html#asenna-paketit",
+    "href": "ennen-kurssia.html#asenna-paketit",
+    "title": "Asennukset ja ensimmäinen koodi",
+    "section": "Asenna paketit",
+    "text": "Asenna paketit\nPaketit ovat R:n laajennuksia. Asennus tehdään kerran. Kirjoita Positronin konsoliin alla oleva rivi ja paina Enter:\ninstall.packages(c(\"tidyverse\", \"gtsummary\", \"NHSRdatasets\"))\nAsennus kestää muutaman minuutin. Konsoliin tulostuu paljon tekstiä, mikä on normaalia. Asennus on valmis, kun konsolin viimeisellä rivillä on taas pelkkä &gt;.",
+    "crumbs": [
+      "Ennen kurssia",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Asennukset ja ensimmäinen koodi</span>"
+    ]
+  },
+  {
+    "objectID": "ennen-kurssia.html#tee-ensimmäinen-quarto-dokumentti",
+    "href": "ennen-kurssia.html#tee-ensimmäinen-quarto-dokumentti",
+    "title": "Asennukset ja ensimmäinen koodi",
+    "section": "Tee ensimmäinen Quarto-dokumentti",
+    "text": "Tee ensimmäinen Quarto-dokumentti\nQuarto-dokumentissa teksti, koodi ja tulokset ovat samassa tiedostossa. Koko kurssin koodi kirjoitetaan tällaiseen dokumenttiin.\n\nValitse File → New File → Quarto Document.\nLisää koodisolu: Insert Code Cell.\nKirjoita soluun:\n\nlibrary(NHSRdatasets)\nnews &lt;- synthetic_news_data\n\nPaina solun yläreunasta Run Cell.\nTallenna dokumentti omaan kansioonsa, esimerkiksi Documents/r-kurssi.\n\nEnsimmäinen rivi ottaa paketin käyttöön. Toinen rivi tallentaa paketin aineiston nimelle news. Jos kaikki toimi, Positronin Variables-paneeliin ilmestyi news, jossa on 1 000 riviä.",
+    "crumbs": [
+      "Ennen kurssia",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Asennukset ja ensimmäinen koodi</span>"
+    ]
+  },
+  {
+    "objectID": "ennen-kurssia.html#tarkista-ennen-ensimmäistä-päivää",
+    "href": "ennen-kurssia.html#tarkista-ennen-ensimmäistä-päivää",
+    "title": "Asennukset ja ensimmäinen koodi",
+    "section": "Tarkista ennen ensimmäistä päivää",
+    "text": "Tarkista ennen ensimmäistä päivää\n\nPositron aukeaa ja näyttää R:n version.\nlibrary(tidyverse) konsolissa ei anna virheilmoitusta.\nVariables-paneelissa näkyy news, kun olet ajanut solun.\nTiedät, mihin kansioon tallensit dokumentin.\n\nJos jokin kohta ei onnistu, ota yhteyttä ennen opetuspäivää. Asennusongelmat on helpompi ratkaista etukäteen kuin tunnilla.\nSeuraavaksi: Päivä 1: aloita tästä.",
+    "crumbs": [
+      "Ennen kurssia",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Asennukset ja ensimmäinen koodi</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/index.html",
+    "href": "paiva1/index.html",
+    "title": "Päivä 1: aloita tästä",
+    "section": "",
+    "text": "Lataa päivän muistikirja\nTiedostossa on valmiina otsikko, asetukset ja aineiston valmistelu. Kaiken muun koodin kirjoitat itse. Et tarvitse GitHub-tunnusta tai terminaalia.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Päivä 1: aloita tästä</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/index.html#lataa-päivän-muistikirja",
+    "href": "paiva1/index.html#lataa-päivän-muistikirja",
+    "title": "Päivä 1: aloita tästä",
+    "section": "",
+    "text": "Lataa paiva1.qmd\n\n\nTallenna tiedosto kurssikansioosi, esimerkiksi Documents/r-kurssi.\nAvaa kansio Positronissa: File → Open Folder.\nAvaa paiva1.qmd ja kirjoita oma nimesi riville author.\nAja ensimmäinen koodisolu: Run Cell.\n\n\n\n\n\n\n\n\nHuomautusSelain näyttää tiedoston tekstinä eikä lataa sitä\n\n\n\n\n\nNapsauta linkkiä hiiren oikealla painikkeella ja valitse Tallenna linkki nimellä. Tarkista, että tiedoston pääte on .qmd eikä .txt.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Päivä 1: aloita tästä</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/index.html#valmistelu",
+    "href": "paiva1/index.html#valmistelu",
+    "title": "Päivä 1: aloita tästä",
+    "section": "Jos lataus ei onnistu",
+    "text": "Jos lataus ei onnistu\nVoit käyttää myös dokumenttia, jonka teit ennakkovideon aikana. Lisää siihen uusi R-solu, kopioi alla oleva koodi soluun kokonaisena ja aja solu. Kopiointipainike on lohkon oikeassa yläkulmassa.\n# Synteettisen opetusaineiston valmistelu. Muokkaukset opetetaan päivänä 2.\nlibrary(tidyverse)\n\nnews &lt;- NHSRdatasets::synthetic_news_data |&gt;\n  mutate(\n    sex = factor(male, levels = 0:1,\n                 labels = c(\"Female\", \"Male\")),\n    oxygen = factor(sup, levels = 0:1,\n                    labels = c(\"Room air\", \"Oxygen\")),\n    avpu = factor(alert, levels = 0:3,\n                  labels = c(\"A\", \"V\", \"P\", \"U\")),\n    outcome = factor(died, levels = 0:1,\n                     labels = c(\"Survived\", \"Died\")),\n    risk = cut(NEWS, breaks = c(-Inf, 4, 6, Inf),\n               labels = c(\"Low (0-4)\", \"Medium (5-6)\",\n                          \"High (7+)\"))\n  ) |&gt;\n  select(age, sex, NEWS, risk, resp, sat, oxygen,\n         syst, dias, pulse, temp, avpu, died, outcome)\nLohko lataa tidyverse-paketit ja antaa aineiston luokille selkokieliset nimet, esimerkiksi 0 ja 1 → Female ja Male. Sen jälkeen aineistossa news on 1 000 riviä ja 14 saraketta. Miten lohko toimii, käydään läpi päivänä 2.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Päivä 1: aloita tästä</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/index.html#opetuksen-jälkeen",
+    "href": "paiva1/index.html#opetuksen-jälkeen",
+    "title": "Päivä 1: aloita tästä",
+    "section": "Opetuksen jälkeen",
+    "text": "Opetuksen jälkeen\nPäivän koodit ja tulokset julkaistaan tässä opetuksen jälkeen. Luvut ja luentotallenne lisätään kirjaan myöhemmin.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Päivä 1: aloita tästä</span>"
+    ]
+  },
+  {
+    "objectID": "tulossa.html",
+    "href": "tulossa.html",
+    "title": "Päivät 2–5",
+    "section": "",
+    "text": "Seuraavien päivien luvut ilmestyvät tähän kirjaan sitä mukaa kuin opetus etenee. Osoite pysyy samana, joten tallenna se kirjanmerkiksi.\n\n\n\n\nAihe\n\n\n\n\nPäivä 2\nAineiston siivoaminen, muokkaaminen ja yhdistäminen\n\n\nPäivä 3\nAineiston kuvailu ja ryhmien vertailu\n\n\nPäivä 4\nUsean tekijän huomiointi ja logistinen regressio\n\n\nPäivä 5\nKoko analyysi alusta loppuun ja päivittyvä raportti\n\n\n\nSisältö on alustava ja tarkentuu kurssin edetessä.\nJokaiselle päivälle tulee oma aloitussivu, jolta lataat päivän muistikirjan. Uuden päivän tiedosto ei korvaa aiempia: paiva1.qmd, paiva2.qmd ja niin edelleen ovat samassa kurssikansiossa rinnakkain.",
+    "crumbs": [
+      "Seuraavat päivät",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivät 2–5</span>"
+    ]
+  },
+  {
+    "objectID": "lataukset.html",
+    "href": "lataukset.html",
+    "title": "Liite A — Lataukset",
+    "section": "",
+    "text": "Päivä 1\nKaikki kurssin tiedostot ovat tällä sivulla. Lataaminen onnistuu selaimella. Et tarvitse GitHub-tunnusta tai terminaalia.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Lataukset</span>"
+    ]
+  },
+  {
+    "objectID": "lataukset.html#päivä-1",
+    "href": "lataukset.html#päivä-1",
+    "title": "Liite A — Lataukset",
+    "section": "",
+    "text": "paiva1.qmd: päivän muistikirja, jossa on valmiina otsikko, asetukset ja aineiston valmistelu",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Lataukset</span>"
+    ]
+  },
+  {
+    "objectID": "lataukset.html#näin-lataat",
+    "href": "lataukset.html#näin-lataat",
+    "title": "Liite A — Lataukset",
+    "section": "Näin lataat",
+    "text": "Näin lataat\n\nNapsauta linkkiä. Tiedosto tallentuu selaimen latauskansioon.\nSiirrä tiedosto kurssikansioosi, esimerkiksi Documents/r-kurssi.\nAvaa kurssikansio Positronissa: File → Open Folder.\n\nJos selain avaa tiedoston tekstinä, napsauta linkkiä hiiren oikealla painikkeella ja valitse Tallenna linkki nimellä.\nUusi lataus ei korvaa omaa työtäsi, kunhan et tallenna sitä samalla nimellä kuin oman muistikirjasi.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Lataukset</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/nappaimet.html",
+    "href": "liitteet/nappaimet.html",
+    "title": "Liite B — Näppäinoikotiet",
+    "section": "",
+    "text": "Koodin kirjoittaminen ja ajaminen\nOikotiet ovat Positronin oletuksia suomalaisella näppäimistöllä. Samat toiminnot löytyvät nimellä komentopaletista: Cmd + Shift + P (Windows: Ctrl + Shift + P).",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Näppäinoikotiet</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/nappaimet.html#koodin-kirjoittaminen-ja-ajaminen",
+    "href": "liitteet/nappaimet.html#koodin-kirjoittaminen-ja-ajaminen",
+    "title": "Liite B — Näppäinoikotiet",
+    "section": "",
+    "text": "Toiminto\nMac\nWindows\n\n\n\n\nAja rivi tai komento\nCmd + Enter\nCtrl + Enter\n\n\nAja koko solu\nCmd + Shift + Enter\nCtrl + Shift + Enter\n\n\nLisää R-solu\nCmd + Shift + I\nCtrl + Shift + I\n\n\nSijoitusnuoli &lt;-\nOption + miinus\nAlt + miinus\n\n\nPutki |&gt;\nCmd + Shift + M\nCtrl + Shift + M\n\n\nTäydennä nimi\nTab\nTab\n\n\nTallenna\nCmd + S\nCtrl + S\n\n\nTee dokumentista HTML-sivu (Preview)\nCmd + Shift + K\nCtrl + Shift + K",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Näppäinoikotiet</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/nappaimet.html#merkit-suomalaisella-näppäimistöllä",
+    "href": "liitteet/nappaimet.html#merkit-suomalaisella-näppäimistöllä",
+    "title": "Liite B — Näppäinoikotiet",
+    "section": "Merkit suomalaisella näppäimistöllä",
+    "text": "Merkit suomalaisella näppäimistöllä\n\n\n\n\n\n\n\n\nMerkki\nMac\nWindows\n\n\n\n\n( )\nShift + 8, Shift + 9\nsama\n\n\n=\nShift + 0\nsama\n\n\n\"\nShift + 2\nsama\n\n\n#\nShift + 3\nsama\n\n\n/\nShift + 7\nsama\n\n\n_\nShift + miinus\nsama\n\n\n?\nShift + plus\nsama\n\n\n&lt;\nnäppäin vasemman Shiftin vieressä\nsama\n\n\n&gt;\nShift + &lt;\nsama\n\n\n|\nOption + 7\nAltGr + &lt;\n\n\n[ ]\nOption + 8, Option + 9\nAltGr + 8, AltGr + 9\n\n\n{ }\nShift + Option + 8, Shift + Option + 9\nAltGr + 7, AltGr + 0\n\n\n~\nOption + ¨, sitten välilyönti\nAltGr + ¨, sitten välilyönti\n\n\n$\nOption + 4\nAltGr + 4",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Näppäinoikotiet</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/virheet.html",
+    "href": "liitteet/virheet.html",
+    "title": "Liite C — Kun koodi ei toimi",
+    "section": "",
+    "text": "Yleisimmät virheilmoitukset\nPunainen teksti konsolissa on R:n tapa kertoa, mikä meni vikaan. Mitään ei mene rikki. Lue ilmoitus, korjaa ja aja uudelleen.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Kun koodi ei toimi</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/virheet.html#yleisimmät-virheilmoitukset",
+    "href": "liitteet/virheet.html#yleisimmät-virheilmoitukset",
+    "title": "Liite C — Kun koodi ei toimi",
+    "section": "",
+    "text": "Ilmoitus\nSyy\nKorjaus\n\n\n\n\ncould not find function \"ggplot\"\nPakettia ei ole ladattu tässä istunnossa.\nAja library(tidyverse).\n\n\nobject 'news' not found\nAineistoa ei ole tehty, tai nimessä on kirjoitusvirhe.\nAja valmistelusolu. Tarkista isot ja pienet kirjaimet.\n\n\nthere is no package called 'tidyverse'\nPakettia ei ole asennettu.\nAja konsolissa install.packages(\"tidyverse\").\n\n\nCannot use + with a single argument\nPlus on rivin alussa.\nSiirrä plus edellisen rivin loppuun.\n\n\nunexpected symbol tai unexpected ')'\nPilkku, sulku tai lainausmerkki puuttuu tai on liikaa.\nTarkista virheilmoituksen osoittama rivi ja sitä edeltävä rivi.\n\n\nobject 'Age' not found\nSarakkeen nimi on kirjoitettu väärin.\nTarkista nimet: glimpse(news).",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Kun koodi ei toimi</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/virheet.html#koodi-ei-anna-virhettä-mutta-tulos-on-outo",
+    "href": "liitteet/virheet.html#koodi-ei-anna-virhettä-mutta-tulos-on-outo",
+    "title": "Liite C — Kun koodi ei toimi",
+    "section": "Koodi ei anna virhettä, mutta tulos on outo",
+    "text": "Koodi ei anna virhettä, mutta tulos on outo\n\nKonsolissa näkyy + eikä &gt;. R odottaa komennolle jatkoa. Yleensä loppusulku tai lainausmerkki puuttuu. Keskeytä näppäimellä Esc tai Ctrl + C, korjaa ja aja uudelleen.\nKuva on tyhjä. Geometria puuttuu. Lisää esimerkiksi + geom_point().\nKaikki pisteet ovat samanvärisiä ja selitteessä lukee värin nimi. Kiinteä väri on kirjoitettu aes():n sisään. Siirrä se geometrian argumentiksi.\nSait liukuvärin, vaikka odotit erillisiä värejä. Muuttuja on luku eikä luokka.\nPreview ei onnistu, vaikka solut toimivat. Preview ajaa dokumentin alusta loppuun tyhjässä R-istunnossa. Tarkista, että library()-rivit ja aineiston valmistelu ovat dokumentin alussa.\nPreview pyytää pakettia rmarkdown. Aja konsolissa install.packages(\"rmarkdown\").",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Kun koodi ei toimi</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/virheet.html#varoitus-ei-ole-virhe",
+    "href": "liitteet/virheet.html#varoitus-ei-ole-virhe",
+    "title": "Liite C — Kun koodi ei toimi",
+    "section": "Varoitus ei ole virhe",
+    "text": "Varoitus ei ole virhe\nWarning tarkoittaa, että koodi ajettiin, mutta R haluaa huomauttaa jostakin. Lue varoitus: joskus se kertoo jotain olennaista, esimerkiksi että havaintoja jäi kuvasta pois.\nKonsoliin tulee myös tavallisia ilmoituksia, jotka eivät ole varoituksia eivätkä virheitä. Tällaisia ovat library(tidyverse):n pakettiluettelo ja geom_smooth():n viesti käytetystä menetelmästä.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Kun koodi ei toimi</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/virheet.html#kun-kysyt-apua",
+    "href": "liitteet/virheet.html#kun-kysyt-apua",
+    "title": "Liite C — Kun koodi ei toimi",
+    "section": "Kun kysyt apua",
+    "text": "Kun kysyt apua\nHyvässä kysymyksessä on kolme asiaa:\n\nKoodi, jonka ajoit.\nVirheilmoitus kokonaisuudessaan.\nMitä yritit saada aikaan.\n\nÄlä liitä potilastietoja kysymykseen. Koodi ja virheilmoitus riittävät lähes aina.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Kun koodi ei toimi</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/projektit.html",
+    "href": "liitteet/projektit.html",
+    "title": "Liite D — Kansiot ja projektit",
+    "section": "",
+    "text": "Kurssikansio\nPositronissa projekti on tavallinen kansio, joka avataan valinnalla File → Open Folder. Erillistä projektitiedostoa ei tarvita. Kun kansio on auki, R etsii tiedostot siitä ja tallentaa kuvat sinne.\nPidä kaikki kurssin tiedostot yhdessä kansiossa ja avaa se aina ensimmäiseksi.\nUuden päivän tiedosto tulee aiempien rinnalle. Lataa esimerkkikoosteet omaan kansioonsa, jotta ne eivät korvaa omaa työtäsi.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Kansiot ja projektit</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/projektit.html#kurssikansio",
+    "href": "liitteet/projektit.html#kurssikansio",
+    "title": "Liite D — Kansiot ja projektit",
+    "section": "",
+    "text": "r-kurssi/\n  paiva1.qmd        oma muistikirjasi\n  paiva2.qmd\n  kuvat/            tallennetut kuvat\n  viitteet/         kirjasta ladatut esimerkkikoosteet",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Kansiot ja projektit</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/projektit.html#oma-tutkimusprojekti",
+    "href": "liitteet/projektit.html#oma-tutkimusprojekti",
+    "title": "Liite D — Kansiot ja projektit",
+    "section": "Oma tutkimusprojekti",
+    "text": "Oma tutkimusprojekti\nYksi kansio yhtä tutkimusta kohti. Rakenne on suositus, ei vaatimus:\ntutkimus/\n  README.md           mitä kansiossa on ja miten analyysi ajetaan\n  R/                  aineiston luku ja muokkaus\n  data/\n    raw/              alkuperäiset tiedostot muuttamattomina\n    derived/          koodilla tehty analyysiaineisto\n  analyses/           analyysien Quarto-dokumentit\n  results/\n    figures/\n    tables/",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Kansiot ja projektit</span>"
+    ]
+  },
+  {
+    "objectID": "liitteet/projektit.html#hyvät-tavat",
+    "href": "liitteet/projektit.html#hyvät-tavat",
+    "title": "Liite D — Kansiot ja projektit",
+    "section": "Hyvät tavat",
+    "text": "Hyvät tavat\n\nSäilytä raaka-aineisto muuttamattomana. Tee kaikki muokkaukset koodilla ja tallenna muokattu aineisto eri paikkaan.\nNimeä tiedostot kuvaavasti ja järjestyksessä: 01_aineisto.R, 02_kuvaileva.qmd. Vältä nimiä kuten lopullinen_uusi2.\nKäytä suhteellisia polkuja. data/raw/potilaat.csv toimii myös kollegan koneella. Omaan käyttäjänimeesi sidottu polku tai setwd() ei toimi.\nAloita tyhjästä R-istunnosta. Koodin pitää itse luoda kaikki tarvitsemansa. Jos analyysi toimii vain, koska muistissa on jotain eiliseltä, se ei ole toistettava.\nPotilastiedot eivät kuulu julkiseen paikkaan. Säilytä tutkimusaineisto tutkimusluvan edellyttämässä paikassa. Koodin voi jakaa ilman aineistoa.",
+    "crumbs": [
+      "Liitteet",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Kansiot ja projektit</span>"
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+---
+title: "Päivä 1 · Oma muistikirja"
+author: "Oma nimi"
+date: today
+lang: fi
+format:
+  html:
+    toc: true
+    embed-resources: true
+    code-copy: true
+execute:
+  warning: false
+  message: false
+---
+
+## Aineiston valmistelu
+
+Aja tämä solu ensimmäiseksi: **Run Cell**. Solu lataa tidyverse-paketit ja tekee aineiston `news`. Älä muuta solua. Sen sisältö käydään läpi päivänä 2.
+
+```{r}
+#| label: valmistelu
+# Synteettisen opetusaineiston valmistelu. Muokkaukset opetetaan päivänä 2.
+library(tidyverse)
+
+news <- NHSRdatasets::synthetic_news_data |>
+  mutate(
+    sex = factor(male, levels = 0:1,
+                 labels = c("Female", "Male")),
+    oxygen = factor(sup, levels = 0:1,
+                    labels = c("Room air", "Oxygen")),
+    avpu = factor(alert, levels = 0:3,
+                  labels = c("A", "V", "P", "U")),
+    outcome = factor(died, levels = 0:1,
+                     labels = c("Survived", "Died")),
+    risk = cut(NEWS, breaks = c(-Inf, 4, 6, Inf),
+               labels = c("Low (0-4)", "Medium (5-6)",
+                          "High (7+)"))
+  ) |>
+  select(age, sex, NEWS, risk, resp, sat, oxygen,
+         syst, dias, pulse, temp, avpu, died, outcome)
+```
+
+## Ensimmäiset komennot
+
+Kirjoita oma koodisi R-soluihin ja muistiinpanosi niiden väliin. Uusi R-solu: Cmd + Shift + I (Windows: Ctrl + Shift + I).
+
+```{r}
+
+```

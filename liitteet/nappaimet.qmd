@@ -1,0 +1,37 @@
+# Näppäinoikotiet {#nappaimet}
+
+Oikotiet ovat Positronin oletuksia suomalaisella näppäimistöllä. Samat toiminnot löytyvät nimellä komentopaletista: Cmd + Shift + P (Windows: Ctrl + Shift + P).
+
+## Koodin kirjoittaminen ja ajaminen
+
+| Toiminto | Mac | Windows |
+|----|----|----|
+| Aja rivi tai komento | Cmd + Enter | Ctrl + Enter |
+| Aja koko solu | Cmd + Shift + Enter | Ctrl + Shift + Enter |
+| Lisää R-solu | Cmd + Shift + I | Ctrl + Shift + I |
+| Sijoitusnuoli `<-` | Option + miinus | Alt + miinus |
+| Putki `|>` | Cmd + Shift + M | Ctrl + Shift + M |
+| Täydennä nimi | Tab | Tab |
+| Tallenna | Cmd + S | Ctrl + S |
+| Tee dokumentista HTML-sivu (*Preview*) | Cmd + Shift + K | Ctrl + Shift + K |
+
+## Merkit suomalaisella näppäimistöllä
+
+| Merkki | Mac | Windows |
+|----|----|----|
+| `(` `)` | Shift + 8, Shift + 9 | sama |
+| `=` | Shift + 0 | sama |
+| `"` | Shift + 2 | sama |
+| `#` | Shift + 3 | sama |
+| `/` | Shift + 7 | sama |
+| `_` | Shift + miinus | sama |
+| `?` | Shift + plus | sama |
+| `<` | näppäin vasemman Shiftin vieressä | sama |
+| `>` | Shift + `<` | sama |
+| `|` | Option + 7 | AltGr + `<` |
+| `[` `]` | Option + 8, Option + 9 | AltGr + 8, AltGr + 9 |
+| `{` `}` | Shift + Option + 8, Shift + Option + 9 | AltGr + 7, AltGr + 0 |
+| `~` | Option + `¨`, sitten välilyönti | AltGr + `¨`, sitten välilyönti |
+| `$` | Option + 4 | AltGr + 4 |
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

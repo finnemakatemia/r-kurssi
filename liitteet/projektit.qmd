@@ -1,0 +1,44 @@
+# Kansiot ja projektit {#projektit}
+
+Positronissa projekti on tavallinen kansio, joka avataan valinnalla **File → Open Folder**. Erillistä projektitiedostoa ei tarvita. Kun kansio on auki, R etsii tiedostot siitä ja tallentaa kuvat sinne.
+
+## Kurssikansio
+
+Pidä kaikki kurssin tiedostot yhdessä kansiossa ja avaa se aina ensimmäiseksi.
+
+``` text
+r-kurssi/
+  paiva1.qmd        oma muistikirjasi
+  paiva2.qmd
+  kuvat/            tallennetut kuvat
+  viitteet/         kirjasta ladatut esimerkkikoosteet
+```
+
+Uuden päivän tiedosto tulee aiempien rinnalle. Lataa esimerkkikoosteet omaan kansioonsa, jotta ne eivät korvaa omaa työtäsi.
+
+## Oma tutkimusprojekti
+
+Yksi kansio yhtä tutkimusta kohti. Rakenne on suositus, ei vaatimus:
+
+``` text
+tutkimus/
+  README.md           mitä kansiossa on ja miten analyysi ajetaan
+  R/                  aineiston luku ja muokkaus
+  data/
+    raw/              alkuperäiset tiedostot muuttamattomina
+    derived/          koodilla tehty analyysiaineisto
+  analyses/           analyysien Quarto-dokumentit
+  results/
+    figures/
+    tables/
+```
+
+## Hyvät tavat
+
+-   **Säilytä raaka-aineisto muuttamattomana.** Tee kaikki muokkaukset koodilla ja tallenna muokattu aineisto eri paikkaan.
+-   **Nimeä tiedostot kuvaavasti ja järjestyksessä:** `01_aineisto.R`, `02_kuvaileva.qmd`. Vältä nimiä kuten `lopullinen_uusi2`.
+-   **Käytä suhteellisia polkuja.** `data/raw/potilaat.csv` toimii myös kollegan koneella. Omaan käyttäjänimeesi sidottu polku tai `setwd()` ei toimi.
+-   **Aloita tyhjästä R-istunnosta.** Koodin pitää itse luoda kaikki tarvitsemansa. Jos analyysi toimii vain, koska muistissa on jotain eiliseltä, se ei ole toistettava.
+-   **Potilastiedot eivät kuulu julkiseen paikkaan.** Säilytä tutkimusaineisto tutkimusluvan edellyttämässä paikassa. Koodin voi jakaa ilman aineistoa.
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

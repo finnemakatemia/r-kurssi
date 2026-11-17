@@ -1,0 +1,41 @@
+# Kun koodi ei toimi {#virheet}
+
+Punainen teksti konsolissa on R:n tapa kertoa, mikä meni vikaan. Mitään ei mene rikki. Lue ilmoitus, korjaa ja aja uudelleen.
+
+## Yleisimmät virheilmoitukset
+
+| Ilmoitus | Syy | Korjaus |
+|----|----|----|
+| `could not find function "ggplot"` | Pakettia ei ole ladattu tässä istunnossa. | Aja `library(tidyverse)`. |
+| `object 'news' not found` | Aineistoa ei ole tehty, tai nimessä on kirjoitusvirhe. | Aja valmistelusolu. Tarkista isot ja pienet kirjaimet. |
+| `there is no package called 'tidyverse'` | Pakettia ei ole asennettu. | Aja konsolissa `install.packages("tidyverse")`. |
+| `Cannot use + with a single argument` | Plus on rivin alussa. | Siirrä plus edellisen rivin loppuun. |
+| `unexpected symbol` tai `unexpected ')'` | Pilkku, sulku tai lainausmerkki puuttuu tai on liikaa. | Tarkista virheilmoituksen osoittama rivi ja sitä edeltävä rivi. |
+| `object 'Age' not found` | Sarakkeen nimi on kirjoitettu väärin. | Tarkista nimet: `glimpse(news)`. |
+
+## Koodi ei anna virhettä, mutta tulos on outo
+
+-   **Konsolissa näkyy `+` eikä `>`.** R odottaa komennolle jatkoa. Yleensä loppusulku tai lainausmerkki puuttuu. Keskeytä näppäimellä Esc tai Ctrl + C, korjaa ja aja uudelleen.
+-   **Kuva on tyhjä.** Geometria puuttuu. Lisää esimerkiksi `+ geom_point()`.
+-   **Kaikki pisteet ovat samanvärisiä ja selitteessä lukee värin nimi.** Kiinteä väri on kirjoitettu `aes()`:n sisään. Siirrä se geometrian argumentiksi.
+-   **Sait liukuvärin, vaikka odotit erillisiä värejä.** Muuttuja on luku eikä luokka.
+-   **Preview ei onnistu, vaikka solut toimivat.** Preview ajaa dokumentin alusta loppuun tyhjässä R-istunnossa. Tarkista, että `library()`-rivit ja aineiston valmistelu ovat dokumentin alussa.
+-   **Preview pyytää pakettia rmarkdown.** Aja konsolissa `install.packages("rmarkdown")`.
+
+## Varoitus ei ole virhe
+
+*Warning* tarkoittaa, että koodi ajettiin, mutta R haluaa huomauttaa jostakin. Lue varoitus: joskus se kertoo jotain olennaista, esimerkiksi että havaintoja jäi kuvasta pois.
+
+Konsoliin tulee myös tavallisia ilmoituksia, jotka eivät ole varoituksia eivätkä virheitä. Tällaisia ovat `library(tidyverse)`:n pakettiluettelo ja `geom_smooth()`:n viesti käytetystä menetelmästä.
+
+## Kun kysyt apua
+
+Hyvässä kysymyksessä on kolme asiaa:
+
+1.  Koodi, jonka ajoit.
+2.  Virheilmoitus kokonaisuudessaan.
+3.  Mitä yritit saada aikaan.
+
+Älä liitä potilastietoja kysymykseen. Koodi ja virheilmoitus riittävät lähes aina.
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

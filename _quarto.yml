@@ -1,0 +1,74 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - "lataukset/**"
+
+lang: fi
+metadata-files:
+  - _videot.yml
+shortcodes:
+  - kurssivideo.lua
+
+# Vapautetut päivät: ohjaa aloitussivujen ja latausten näkyvyyttä.
+julkaistu:
+  paiva1: false
+
+book:
+  title: "Käytännönläheinen R kliinikolle"
+  subtitle: "Aineistosta kuvaajaksi ja raportiksi"
+  author: "Anssi Saviluoto"
+  chapters:
+    - index.qmd
+    - part: "Ennen kurssia"
+      chapters:
+        - ennen-kurssia.qmd
+    - part: "Päivä 1 · Työympäristö ja kuvaajat"
+      chapters:
+        - paiva1/index.qmd
+    - part: "Seuraavat päivät"
+      chapters:
+        - tulossa.qmd
+  appendices:
+    - lataukset.qmd
+    - liitteet/nappaimet.qmd
+    - liitteet/virheet.qmd
+    - liitteet/projektit.qmd
+  search: true
+  page-navigation: true
+  back-to-top-navigation: true
+  sidebar:
+    collapse-level: 2
+  page-footer:
+    left: "© 2026 Anssi Saviluoto"
+    right: "Synteettinen opetusaineisto: ei kliinisiä johtopäätöksiä"
+  # Lisää nämä, kun GitHub-repo on luotu (tiedostossa kirja/lahteet/kirja.json: repo ja osoite):
+  repo-url: https://github.com/finnemakatemia/r-kurssi
+  repo-actions: [source, issue]
+  site-url: https://finnemakatemia.github.io/r-kurssi/
+
+format:
+  html:
+    theme: [cosmo, assets/kirja.scss]
+    number-sections: false
+    toc-depth: 3
+    toc-title: "Tällä sivulla"
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
+    link-external-newwindow: true
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+
+knitr:
+  opts_chunk:
+    fig.width: 6.5
+    fig.height: 4
+    dpi: 130
+    fig.align: center
+    out.width: "80%"
+    comment: "#>"
