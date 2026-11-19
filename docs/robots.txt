@@ -1,1 +1,1 @@
-Sitemap: https://finnemakatemia.github.io/r-kurssi/sitemap.xml
+Sitemap: https://rkurssi.anssisaviluoto.com/sitemap.xml

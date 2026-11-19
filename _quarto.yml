@@ -26,6 +26,7 @@ book:
     - part: "Päivä 1 · Työympäristö ja kuvaajat"
       chapters:
         - paiva1/index.qmd
+        - paiva1/koodiesimerkit.qmd
     - part: "Seuraavat päivät"
       chapters:
         - tulossa.qmd
@@ -41,11 +42,10 @@ book:
     collapse-level: 2
   page-footer:
     left: "© 2026 Anssi Saviluoto"
-    right: "Synteettinen opetusaineisto: ei kliinisiä johtopäätöksiä"
   # Lisää nämä, kun GitHub-repo on luotu (tiedostossa kirja/lahteet/kirja.json: repo ja osoite):
   repo-url: https://github.com/finnemakatemia/r-kurssi
   repo-actions: [source, issue]
-  site-url: https://finnemakatemia.github.io/r-kurssi/
+  site-url: https://rkurssi.anssisaviluoto.com/
 
 format:
   html:

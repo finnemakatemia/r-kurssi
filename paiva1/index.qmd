@@ -52,6 +52,10 @@ news <- NHSRdatasets::synthetic_news_data |>
 
 Lohko lataa tidyverse-paketit ja antaa aineiston luokille selkokieliset nimet, esimerkiksi 0 ja 1 → Female ja Male. Sen jälkeen aineistossa `news` on 1 000 riviä ja 14 saraketta. Miten lohko toimii, käydään läpi päivänä 2.
 
+## Luennon aikana
+
+[Avaa päivän koodiesimerkit](koodiesimerkit.qmd). Demokoodi näkyy luennon järjestyksessä. Avaa tehtävän mallikoodi, kun olet kokeillut itse.
+
 ## Opetuksen jälkeen
 
 ::: {.content-visible when-meta="julkaistu.paiva1"}

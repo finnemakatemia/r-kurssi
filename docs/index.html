@@ -147,6 +147,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./paiva1/index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Päivä 1: aloita tästä</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./paiva1/koodiesimerkit.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Päivä 1 · Luennon koodiesimerkit</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -248,9 +253,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="tervetuloa" class="level1 unnumbered">
 <h1 class="unnumbered">Tervetuloa</h1>
 <div class="kansi">
-<p><img src="kuvat/kansi.jpg" class="img-fluid" alt="Kuvitus: lääkärihelikopteri lentää järvimaiseman yllä, taustalla nouseva viivakuvaaja."></p>
+<p><img src="kuvat/kansi.jpg" class="img-fluid" alt="Keltainen lääkärihelikopteri lentää järven yllä. Oikealla kaksi kliinikkoa tarkastelee kuvaajaa sairaalan päivystystilassa."></p>
 </div>
-<p>Tämä on kurssin <em>Käytännönläheinen R kliinikolle</em> oppikirja. Kurssi on tehty lääkäreille ja muille kliinikoille, jotka haluavat analysoida oman tutkimusaineistonsa itse. Aiempaa ohjelmointikokemusta ei tarvita.</p>
+<p>Tämä on kurssin <em>Käytännönläheinen R kliinikolle</em> opetusaineisto. Kurssi on suunniteltu tutkimusta tekeville ensihoitajille, sairaanhoitajille ja lääkäreille.</p>
+<p>Aiempaa ohjelmointikokemusta ei tarvita, mutta osallistujalla oletetaan olevan perusymmärrys tutkimuksen lukemisesta. Tavallisten kuvaajien tulkinnan tulisi olla tuttua, ja p-arvojen merkityksestä on hyvä olla käsitys.</p>
 <p>Kirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaajat ja harjoitukset. Voit käyttää sitä kurssin aikana muistin tukena tai opiskella sen avulla itsenäisesti kurssin jälkeen.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -301,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Jokaisen päivän koodit ja tulokset julkaistaan heti opetuksen jälkeen, luvut ja luentotallenne hieman myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.</p>
+<p><a href="./paiva1/koodiesimerkit.html">Päivän 1 koodiesimerkit</a> ovat käytettävissä opetuksen aikana. Päivän ladattava koodi- ja tuloskooste julkaistaan opetuksen jälkeen. Luvut ja luentotallenteet lisätään myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.</p>
 </section>
 <section id="näin-käytät-kirjaa" class="level2">
 <h2 class="anchored" data-anchor-id="näin-käytät-kirjaa">Näin käytät kirjaa</h2>
@@ -314,12 +320,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="aineisto" class="level2">
 <h2 class="anchored" data-anchor-id="aineisto">Aineisto</h2>
-<p>Esimerkeissä käytetään synteettistä sairaala-aineistoa <code>synthetic_news_data</code> paketista NHSRdatasets. Aineisto on keinotekoinen: siinä ei ole oikeiden potilaiden tietoja, eikä kuvaajista voi tehdä kliinisiä johtopäätöksiä.</p>
+<p>Esimerkeissä käytetään NHSRdatasets-paketin synteettistä sairaala-aineistoa (<code>synthetic_news_data</code>).</p>
 </section>
 <section id="tekijä" class="level2">
 <h2 class="anchored" data-anchor-id="tekijä">Tekijä</h2>
 <p>Anssi Saviluoto on akuuttilääketieteeseen erikoistuva lääkäri ja entinen ensihoitaja. Hän on tehnyt lääkärihelikopteritoiminnan (HEMS) tutkimusta vuodesta 2018 ja väitellyt vuonna 2021 ensihoitolääkäreiden toimenpidefrekvensseistä. R:n hän on opetellut omaa tutkimustaan varten.</p>
-<p>Kurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Tilastollisen menetelmän valintaa käsitellään suppeasti, ja painopiste on menetelmien käytössä R:llä. Kun menetelmän valinta ratkaisee, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa. R-koodi helpottaa tätä yhteistyötä: koodista näkee jokaisen vaiheen, ja tilastotieteilijä voi lukea, korjata ja ajaa saman analyysin.</p>
+<p>Kurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Painopiste on menetelmien käytössä R:llä, ja tilastollisten menetelmien valintaa käsitellään suppeasti. Kun oikean menetelmän valinta on ratkaisevaa, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa.</p>
 <!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->
 
 
@@ -400,7 +406,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/finnemakatemia\.github\.io\/r-kurssi\/");
+        var filterRegex = new RegExp("https:\/\/rkurssi\.anssisaviluoto\.com\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -751,8 +757,8 @@ ul.task-list li input[type="checkbox"] {
       &nbsp;
     <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/finnemakatemia/r-kurssi/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Näytä lähdekoodi</a></li><li><a href="https://github.com/finnemakatemia/r-kurssi/issues/new" class="toc-action"><i class="bi empty"></i>Ilmoita ongelmasta</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>Synteettinen opetusaineisto: ei kliinisiä johtopäätöksiä</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 

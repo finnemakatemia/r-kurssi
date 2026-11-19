@@ -1,10 +1,12 @@
 # Tervetuloa {.unnumbered}
 
 ::: {.kansi}
-![](kuvat/kansi.jpg){fig-alt="Kuvitus: lääkärihelikopteri lentää järvimaiseman yllä, taustalla nouseva viivakuvaaja."}
+![](kuvat/kansi.jpg){fig-alt="Keltainen lääkärihelikopteri lentää järven yllä. Oikealla kaksi kliinikkoa tarkastelee kuvaajaa sairaalan päivystystilassa."}
 :::
 
-Tämä on kurssin *Käytännönläheinen R kliinikolle* oppikirja. Kurssi on tehty lääkäreille ja muille kliinikoille, jotka haluavat analysoida oman tutkimusaineistonsa itse. Aiempaa ohjelmointikokemusta ei tarvita.
+Tämä on kurssin *Käytännönläheinen R kliinikolle* opetusaineisto. Kurssi on suunniteltu tutkimusta tekeville ensihoitajille, sairaanhoitajille ja lääkäreille.
+
+Aiempaa ohjelmointikokemusta ei tarvita, mutta osallistujalla oletetaan olevan perusymmärrys tutkimuksen lukemisesta. Tavallisten kuvaajien tulkinnan tulisi olla tuttua, ja p-arvojen merkityksestä on hyvä olla käsitys.
 
 Kirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaajat ja harjoitukset. Voit käyttää sitä kurssin aikana muistin tukena tai opiskella sen avulla itsenäisesti kurssin jälkeen.
 
@@ -21,7 +23,7 @@ Kirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaaj
 | Päivä 4 | Usean tekijän huomiointi ja logistinen regressio | tulossa |
 | Päivä 5 | Koko analyysi alusta loppuun ja päivittyvä raportti | tulossa |
 
-Jokaisen päivän koodit ja tulokset julkaistaan heti opetuksen jälkeen, luvut ja luentotallenne hieman myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.
+[Päivän 1 koodiesimerkit](paiva1/koodiesimerkit.qmd) ovat käytettävissä opetuksen aikana. Päivän ladattava koodi- ja tuloskooste julkaistaan opetuksen jälkeen. Luvut ja luentotallenteet lisätään myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.
 
 ## Näin käytät kirjaa
 
@@ -32,12 +34,12 @@ Jokaisen päivän koodit ja tulokset julkaistaan heti opetuksen jälkeen, luvut 
 
 ## Aineisto
 
-Esimerkeissä käytetään synteettistä sairaala-aineistoa `synthetic_news_data` paketista NHSRdatasets. Aineisto on keinotekoinen: siinä ei ole oikeiden potilaiden tietoja, eikä kuvaajista voi tehdä kliinisiä johtopäätöksiä.
+Esimerkeissä käytetään NHSRdatasets-paketin synteettistä sairaala-aineistoa (`synthetic_news_data`).
 
 ## Tekijä
 
 Anssi Saviluoto on akuuttilääketieteeseen erikoistuva lääkäri ja entinen ensihoitaja. Hän on tehnyt lääkärihelikopteritoiminnan (HEMS) tutkimusta vuodesta 2018 ja väitellyt vuonna 2021 ensihoitolääkäreiden toimenpidefrekvensseistä. R:n hän on opetellut omaa tutkimustaan varten.
 
-Kurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Tilastollisen menetelmän valintaa käsitellään suppeasti, ja painopiste on menetelmien käytössä R:llä. Kun menetelmän valinta ratkaisee, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa. R-koodi helpottaa tätä yhteistyötä: koodista näkee jokaisen vaiheen, ja tilastotieteilijä voi lukea, korjata ja ajaa saman analyysin.
+Kurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Painopiste on menetelmien käytössä R:llä, ja tilastollisten menetelmien valintaa käsitellään suppeasti. Kun oikean menetelmän valinta on ratkaisevaa, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa.
 
 <!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->

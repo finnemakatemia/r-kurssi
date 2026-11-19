@@ -7,7 +7,6 @@ Kurssin oppikirja ja latausmateriaalit. Kirja on tehty Quartolla.
 - `_freeze/` sisältää ajettujen koodien tulokset, jotta vanhoja lukuja ei tarvitse ajaa uudelleen.
 
 Aineisto on synteettistä opetusaineistoa (`NHSRdatasets::synthetic_news_data`).
-Kuvaajista ei voi tehdä kliinisiä johtopäätöksiä.
 
 ## Ylläpitäjälle
 

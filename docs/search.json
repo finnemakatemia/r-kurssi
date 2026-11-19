@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Käytännönläheinen R kliinikolle",
     "section": "",
-    "text": "Tervetuloa\nTämä on kurssin Käytännönläheinen R kliinikolle oppikirja. Kurssi on tehty lääkäreille ja muille kliinikoille, jotka haluavat analysoida oman tutkimusaineistonsa itse. Aiempaa ohjelmointikokemusta ei tarvita.\nKirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaajat ja harjoitukset. Voit käyttää sitä kurssin aikana muistin tukena tai opiskella sen avulla itsenäisesti kurssin jälkeen.",
+    "text": "Tervetuloa\nTämä on kurssin Käytännönläheinen R kliinikolle opetusaineisto. Kurssi on suunniteltu tutkimusta tekeville ensihoitajille, sairaanhoitajille ja lääkäreille.\nAiempaa ohjelmointikokemusta ei tarvita, mutta osallistujalla oletetaan olevan perusymmärrys tutkimuksen lukemisesta. Tavallisten kuvaajien tulkinnan tulisi olla tuttua, ja p-arvojen merkityksestä on hyvä olla käsitys.\nKirjaan kootaan sama sisältö kuin lähiopetuksessa: selitykset, koodit, kuvaajat ja harjoitukset. Voit käyttää sitä kurssin aikana muistin tukena tai opiskella sen avulla itsenäisesti kurssin jälkeen.",
     "crumbs": [
       "Tervetuloa"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#kurssin-rakenne",
     "title": "Käytännönläheinen R kliinikolle",
     "section": "Kurssin rakenne",
-    "text": "Kurssin rakenne\n\n\n\n\nAihe\nTila\n\n\n\n\nEnnen kurssia\nAsennukset ja ensimmäinen Quarto-dokumentti\njulkaistu\n\n\nPäivä 1\nTyöympäristö ja kuvaajat (ggplot2)\naloita tästä\n\n\nPäivä 2\nAineiston siivoaminen, muokkaaminen ja yhdistäminen\ntulossa\n\n\nPäivä 3\nAineiston kuvailu ja ryhmien vertailu\ntulossa\n\n\nPäivä 4\nUsean tekijän huomiointi ja logistinen regressio\ntulossa\n\n\nPäivä 5\nKoko analyysi alusta loppuun ja päivittyvä raportti\ntulossa\n\n\n\nJokaisen päivän koodit ja tulokset julkaistaan heti opetuksen jälkeen, luvut ja luentotallenne hieman myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.",
+    "text": "Kurssin rakenne\n\n\n\n\nAihe\nTila\n\n\n\n\nEnnen kurssia\nAsennukset ja ensimmäinen Quarto-dokumentti\njulkaistu\n\n\nPäivä 1\nTyöympäristö ja kuvaajat (ggplot2)\naloita tästä\n\n\nPäivä 2\nAineiston siivoaminen, muokkaaminen ja yhdistäminen\ntulossa\n\n\nPäivä 3\nAineiston kuvailu ja ryhmien vertailu\ntulossa\n\n\nPäivä 4\nUsean tekijän huomiointi ja logistinen regressio\ntulossa\n\n\nPäivä 5\nKoko analyysi alusta loppuun ja päivittyvä raportti\ntulossa\n\n\n\nPäivän 1 koodiesimerkit ovat käytettävissä opetuksen aikana. Päivän ladattava koodi- ja tuloskooste julkaistaan opetuksen jälkeen. Luvut ja luentotallenteet lisätään myöhemmin. Päivien 2–5 sisältö on alustava ja tarkentuu kurssin edetessä.",
     "crumbs": [
       "Tervetuloa"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#aineisto",
     "title": "Käytännönläheinen R kliinikolle",
     "section": "Aineisto",
-    "text": "Aineisto\nEsimerkeissä käytetään synteettistä sairaala-aineistoa synthetic_news_data paketista NHSRdatasets. Aineisto on keinotekoinen: siinä ei ole oikeiden potilaiden tietoja, eikä kuvaajista voi tehdä kliinisiä johtopäätöksiä.",
+    "text": "Aineisto\nEsimerkeissä käytetään NHSRdatasets-paketin synteettistä sairaala-aineistoa (synthetic_news_data).",
     "crumbs": [
       "Tervetuloa"
     ]
@@ -44,7 +44,7 @@
     "href": "index.html#tekijä",
     "title": "Käytännönläheinen R kliinikolle",
     "section": "Tekijä",
-    "text": "Tekijä\nAnssi Saviluoto on akuuttilääketieteeseen erikoistuva lääkäri ja entinen ensihoitaja. Hän on tehnyt lääkärihelikopteritoiminnan (HEMS) tutkimusta vuodesta 2018 ja väitellyt vuonna 2021 ensihoitolääkäreiden toimenpidefrekvensseistä. R:n hän on opetellut omaa tutkimustaan varten.\nKurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Tilastollisen menetelmän valintaa käsitellään suppeasti, ja painopiste on menetelmien käytössä R:llä. Kun menetelmän valinta ratkaisee, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa. R-koodi helpottaa tätä yhteistyötä: koodista näkee jokaisen vaiheen, ja tilastotieteilijä voi lukea, korjata ja ajaa saman analyysin.",
+    "text": "Tekijä\nAnssi Saviluoto on akuuttilääketieteeseen erikoistuva lääkäri ja entinen ensihoitaja. Hän on tehnyt lääkärihelikopteritoiminnan (HEMS) tutkimusta vuodesta 2018 ja väitellyt vuonna 2021 ensihoitolääkäreiden toimenpidefrekvensseistä. R:n hän on opetellut omaa tutkimustaan varten.\nKurssi on kliinikon käytännön työkalupakki, ei tilastotieteen kurssi. Painopiste on menetelmien käytössä R:llä, ja tilastollisten menetelmien valintaa käsitellään suppeasti. Kun oikean menetelmän valinta on ratkaisevaa, ota biostatistikko mukaan jo tutkimuksen suunnitteluvaiheessa.",
     "crumbs": [
       "Tervetuloa"
     ]
@@ -138,6 +138,17 @@
     ]
   },
   {
+    "objectID": "paiva1/index.html#luennon-aikana",
+    "href": "paiva1/index.html#luennon-aikana",
+    "title": "Päivä 1: aloita tästä",
+    "section": "Luennon aikana",
+    "text": "Luennon aikana\nAvaa päivän koodiesimerkit. Demokoodi näkyy luennon järjestyksessä. Avaa tehtävän mallikoodi, kun olet kokeillut itse.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Päivä 1: aloita tästä</span>"
+    ]
+  },
+  {
     "objectID": "paiva1/index.html#opetuksen-jälkeen",
     "href": "paiva1/index.html#opetuksen-jälkeen",
     "title": "Päivä 1: aloita tästä",
@@ -149,6 +160,127 @@
     ]
   },
   {
+    "objectID": "paiva1/koodiesimerkit.html",
+    "href": "paiva1/koodiesimerkit.html",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "",
+    "text": "Konsoli ja Quarto\nPidä oma muistikirjasi auki Positronissa. Demokoodi etenee luennon järjestyksessä. Harjoittele omassa tiedostossasi ja avaa mallikoodi vasta oman kokeilun jälkeen.\nLaske sokki-indeksi konsolissa. Tallenna seuraavaksi arvot nimillä ja käytä niitä laskussa.\n110 / 85\n\n#&gt; [1] 1.294118\nsyke &lt;- 110\nsystolinen &lt;- 85\nsyke / systolinen\n\n#&gt; [1] 1.294118\nsykkeet &lt;- c(72, 88, 110, 95)\nmean(sykkeet)\n\n#&gt; [1] 91.25\nAvaa ohje Positronin Help-paneeliin.\n?mean",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#konsoli-ja-quarto",
+    "href": "paiva1/koodiesimerkit.html#konsoli-ja-quarto",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "",
+    "text": "Kokeile itse · Koodisolu ja Preview\nTallenna sykearvo 110 ja systolinen paine 85 koodisoluun. Laske sokki-indeksi, kirjoita tuloksesta muistiinpano solun alle ja avaa Preview.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nsyke &lt;- 110\nsystolinen &lt;- 85\nsyke / systolinen",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#paketit-ja-aineisto",
+    "href": "paiva1/koodiesimerkit.html#paketit-ja-aineisto",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Paketit ja aineisto",
+    "text": "Paketit ja aineisto\nAja oman muistikirjasi valmistelusolu ennen esimerkkejä. Se lataa tidyverse-paketit ja luo muuttujan news NHSRdatasets-paketin synteettisestä aineistosta.\n\n# Synteettisen opetusaineiston valmistelu. Muokkaukset opetetaan päivänä 2.\nlibrary(tidyverse)\n\nnews &lt;- NHSRdatasets::synthetic_news_data |&gt;\n  mutate(\n    sex = factor(male, levels = 0:1,\n                 labels = c(\"Female\", \"Male\")),\n    oxygen = factor(sup, levels = 0:1,\n                    labels = c(\"Room air\", \"Oxygen\")),\n    avpu = factor(alert, levels = 0:3,\n                  labels = c(\"A\", \"V\", \"P\", \"U\")),\n    outcome = factor(died, levels = 0:1,\n                     labels = c(\"Survived\", \"Died\")),\n    risk = cut(NEWS, breaks = c(-Inf, 4, 6, Inf),\n               labels = c(\"Low (0-4)\", \"Medium (5-6)\",\n                          \"High (7+)\"))\n  ) |&gt;\n  select(age, sex, NEWS, risk, resp, sat, oxygen,\n         syst, dias, pulse, temp, avpu, died, outcome)\n\nTutki rivejä, sarakkeiden tyyppejä, tunnuslukuja ja ryhmäkokoja.\n\nnews\n\n#&gt; # A tibble: 1,000 × 14\n#&gt;      age sex     NEWS risk     resp   sat oxygen  syst  dias pulse  temp avpu \n#&gt;    &lt;int&gt; &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;   &lt;int&gt; &lt;int&gt; &lt;fct&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;dbl&gt; &lt;fct&gt;\n#&gt;  1    68 Female     3 Low (0…    26    96 Room …   150    98    78  36.8 A    \n#&gt;  2    94 Male       1 Low (0…    18    96 Room …   145    67    62  35   A    \n#&gt;  3    85 Female     0 Low (0…    18    96 Room …   169    69    54  36.2 A    \n#&gt;  4    44 Male       0 Low (0…    17    96 Room …   154   106    80  36.9 A    \n#&gt;  5    77 Female     1 Low (0…    20    95 Room …   122    67    62  36.4 A    \n#&gt;  6    58 Female     1 Low (0…    20    98 Room …   146   106    73  35.3 A    \n#&gt;  7    25 Female     4 Low (0…    12    99 Room …    65    42    72  35.6 A    \n#&gt;  8    69 Female     0 Low (0…    16    97 Room …   116    56    90  37.2 A    \n#&gt;  9    91 Female     1 Low (0…    16    99 Room …   162    72    60  35.5 A    \n#&gt; 10    70 Female     1 Low (0…    16    97 Room …   132    96    67  35.3 A    \n#&gt; # ℹ 990 more rows\n#&gt; # ℹ 2 more variables: died &lt;int&gt;, outcome &lt;fct&gt;\n\n\n\nglimpse(news)\n\n#&gt; Rows: 1,000\n#&gt; Columns: 14\n#&gt; $ age     &lt;int&gt; 68, 94, 85, 44, 77, 58, 25, 69, 91, 70, 87, 93, 61, 75, 97, …\n#&gt; $ sex     &lt;fct&gt; Female, Male, Female, Male, Female, Female, Female, Female, …\n#&gt; $ NEWS    &lt;int&gt; 3, 1, 0, 0, 1, 1, 4, 0, 1, 1, 7, 2, 5, 1, 1, 3, 1, 5, 0, 2, …\n#&gt; $ risk    &lt;fct&gt; Low (0-4), Low (0-4), Low (0-4), Low (0-4), Low (0-4), Low (…\n#&gt; $ resp    &lt;int&gt; 26, 18, 18, 17, 20, 20, 12, 16, 16, 16, 24, 16, 26, 12, 16, …\n#&gt; $ sat     &lt;int&gt; 96, 96, 96, 96, 95, 98, 99, 97, 99, 97, 87, 95, 96, 96, 98, …\n#&gt; $ oxygen  &lt;fct&gt; Room air, Room air, Room air, Room air, Room air, Room air, …\n#&gt; $ syst    &lt;int&gt; 150, 145, 169, 154, 122, 146, 65, 116, 162, 132, 110, 166, 1…\n#&gt; $ dias    &lt;int&gt; 98, 67, 69, 106, 67, 106, 42, 56, 72, 96, 85, 90, 78, 80, 72…\n#&gt; $ pulse   &lt;int&gt; 78, 62, 54, 80, 62, 73, 72, 90, 60, 67, 95, 87, 93, 65, 89, …\n#&gt; $ temp    &lt;dbl&gt; 36.8, 35.0, 36.2, 36.9, 36.4, 35.3, 35.6, 37.2, 35.5, 35.3, …\n#&gt; $ avpu    &lt;fct&gt; A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, …\n#&gt; $ died    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n#&gt; $ outcome &lt;fct&gt; Survived, Survived, Survived, Survived, Survived, Survived, …\n\n\n\nsummary(news)\n\n#&gt;       age             sex           NEWS                  risk    \n#&gt;  Min.   : 17.00   Female:524   Min.   : 0.000   Low (0-4)   :822  \n#&gt;  1st Qu.: 60.00   Male  :476   1st Qu.: 1.000   Medium (5-6):106  \n#&gt;  Median : 74.00                Median : 2.000   High (7+)   : 72  \n#&gt;  Mean   : 69.65                Mean   : 2.444                     \n#&gt;  3rd Qu.: 84.00                3rd Qu.: 4.000                     \n#&gt;  Max.   :102.00                Max.   :12.000                     \n#&gt;       resp           sat              oxygen         syst      \n#&gt;  Min.   :10.0   Min.   : 82.00   Room air:877   Min.   : 65.0  \n#&gt;  1st Qu.:16.0   1st Qu.: 95.00   Oxygen  :123   1st Qu.:118.0  \n#&gt;  Median :18.0   Median : 97.00                  Median :134.0  \n#&gt;  Mean   :18.4   Mean   : 96.38                  Mean   :135.7  \n#&gt;  3rd Qu.:20.0   3rd Qu.: 98.00                  3rd Qu.:150.0  \n#&gt;  Max.   :43.0   Max.   :100.00                  Max.   :220.0  \n#&gt;       dias            pulse            temp       avpu         died     \n#&gt;  Min.   : 17.00   Min.   : 40.0   Min.   :33.10   A:968   Min.   :0.00  \n#&gt;  1st Qu.: 63.00   1st Qu.: 70.0   1st Qu.:35.80   V:  3   1st Qu.:0.00  \n#&gt;  Median : 74.00   Median : 84.0   Median :36.20   P: 19   Median :0.00  \n#&gt;  Mean   : 74.63   Mean   : 85.8   Mean   :36.31   U: 10   Mean   :0.07  \n#&gt;  3rd Qu.: 84.00   3rd Qu.: 98.0   3rd Qu.:36.70           3rd Qu.:0.00  \n#&gt;  Max.   :124.00   Max.   :200.0   Max.   :40.20           Max.   :1.00  \n#&gt;      outcome   \n#&gt;  Survived:930  \n#&gt;  Died    : 70  \n#&gt;                \n#&gt;                \n#&gt;                \n#&gt; \n\n\n\ncount(news, risk)\n\n#&gt; # A tibble: 3 × 2\n#&gt;   risk             n\n#&gt;   &lt;fct&gt;        &lt;int&gt;\n#&gt; 1 Low (0-4)      822\n#&gt; 2 Medium (5-6)   106\n#&gt; 3 High (7+)       72\n\n\nAvaa aineisto Positronin taulukkonäkymään.\n\nView(news)\n\n\nKokeile itse · Tutustu aineistoon\nLaske luokkamuuttujat, selvitä lisähappea saaneiden määrä ja etsi ikäjakauman pienin ja suurin arvo.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nglimpse(news)\n\n#&gt; Rows: 1,000\n#&gt; Columns: 14\n#&gt; $ age     &lt;int&gt; 68, 94, 85, 44, 77, 58, 25, 69, 91, 70, 87, 93, 61, 75, 97, …\n#&gt; $ sex     &lt;fct&gt; Female, Male, Female, Male, Female, Female, Female, Female, …\n#&gt; $ NEWS    &lt;int&gt; 3, 1, 0, 0, 1, 1, 4, 0, 1, 1, 7, 2, 5, 1, 1, 3, 1, 5, 0, 2, …\n#&gt; $ risk    &lt;fct&gt; Low (0-4), Low (0-4), Low (0-4), Low (0-4), Low (0-4), Low (…\n#&gt; $ resp    &lt;int&gt; 26, 18, 18, 17, 20, 20, 12, 16, 16, 16, 24, 16, 26, 12, 16, …\n#&gt; $ sat     &lt;int&gt; 96, 96, 96, 96, 95, 98, 99, 97, 99, 97, 87, 95, 96, 96, 98, …\n#&gt; $ oxygen  &lt;fct&gt; Room air, Room air, Room air, Room air, Room air, Room air, …\n#&gt; $ syst    &lt;int&gt; 150, 145, 169, 154, 122, 146, 65, 116, 162, 132, 110, 166, 1…\n#&gt; $ dias    &lt;int&gt; 98, 67, 69, 106, 67, 106, 42, 56, 72, 96, 85, 90, 78, 80, 72…\n#&gt; $ pulse   &lt;int&gt; 78, 62, 54, 80, 62, 73, 72, 90, 60, 67, 95, 87, 93, 65, 89, …\n#&gt; $ temp    &lt;dbl&gt; 36.8, 35.0, 36.2, 36.9, 36.4, 35.3, 35.6, 37.2, 35.5, 35.3, …\n#&gt; $ avpu    &lt;fct&gt; A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, …\n#&gt; $ died    &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n#&gt; $ outcome &lt;fct&gt; Survived, Survived, Survived, Survived, Survived, Survived, …\n\ncount(news, oxygen)\n\n#&gt; # A tibble: 2 × 2\n#&gt;   oxygen       n\n#&gt;   &lt;fct&gt;    &lt;int&gt;\n#&gt; 1 Room air   877\n#&gt; 2 Oxygen     123\n\nsummary(news$age)\n\n#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n#&gt;   17.00   60.00   74.00   69.65   84.00  102.00\n\n\nAineistossa on viisi luokkamuuttujaa. Lisähappea sai 123 potilasta. Iät ovat 17–102 vuotta.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#ensimmäinen-hajontakuva",
+    "href": "paiva1/koodiesimerkit.html#ensimmäinen-hajontakuva",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Ensimmäinen hajontakuva",
+    "text": "Ensimmäinen hajontakuva\nAineisto. Kerro ggplot2:lle, mistä aineistosta kuva piirretään.\n\nggplot(data = news)\n\n\n\n\n\n\n\n\nAkselit. Liitä ikä x-akselille ja systolinen verenpaine y-akselille.\n\nggplot(data = news, aes(x = age, y = syst))\n\n\n\n\n\n\n\n\nPisteet. Lisää geom_point(). Lyhyemmässä muodossa argumenttien nimet voi jättää pois.\n\nggplot(data = news, aes(x = age, y = syst)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst)) +\n  geom_point()\n\n\nKokeile itse · Vaihda y-akselin muuttuja\nPiirrä ikä ja systolinen verenpaine. Vaihda sitten y-akselille syke.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(age, pulse)) +\n  geom_point()",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#väri-läpinäkyvyys-ja-suora",
+    "href": "paiva1/koodiesimerkit.html#väri-läpinäkyvyys-ja-suora",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Väri, läpinäkyvyys ja suora",
+    "text": "Väri, läpinäkyvyys ja suora\nVäritä pisteet muuttujan mukaan tai anna kaikille sama väri. Säädä läpinäkyvyyttä ja vertaa tasoitettua käyrää suoraan.\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst, colour = NEWS)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst)) +\n  geom_point(colour = \"steelblue\")\n\n\nggplot(\n  news,\n  aes(age, syst, colour = \"steelblue\")\n) +\n  geom_point()\n\n\nggplot(news, aes(age, syst)) +\n  geom_point(\n    colour = \"steelblue\",\n    alpha = 0.3\n  )\n\n\nggplot(news, aes(age, syst)) +\n  geom_point() +\n  geom_smooth()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\n\n\nLisäesimerkit · Ryhmittely ja zoomaus\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n\nggplot(news, aes(age, syst)) +\n  geom_point(aes(colour = sex)) +\n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  coord_cartesian(ylim = c(100, 150))\n\n\nggplot(news, aes(age, syst)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  ylim(100, 150)\n\n\n\n\n\n\n\n\n\n\nKokeile itse · Tehtävä 1\nPiirrä ikä ja syke hajontakuvana. Väritä pisteet lisähapen (oxygen) mukaan.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(age, pulse, colour = oxygen)) +\n  geom_point()",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#jakaumat",
+    "href": "paiva1/koodiesimerkit.html#jakaumat",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Jakaumat",
+    "text": "Jakaumat\nSäädä histogrammin pylvään leveyttä ja vertaile ryhmiä. Tiheyskuvaaja näyttää jakauman tasoitettuna.\n\nggplot(news, aes(age)) +\n  geom_histogram()\n\n\nggplot(news, aes(age)) +\n  geom_histogram(binwidth = 5)\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age)) +\n  geom_histogram(binwidth = 5, colour = \"white\")\n\n\nggplot(news, aes(age, fill = sex)) +\n  geom_histogram(binwidth = 5, colour = \"white\")\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, fill = sex)) +\n  geom_density()\n\n\nggplot(news, aes(age, fill = sex)) +\n  geom_density(alpha = 0.4)\n\n\n\n\n\n\n\n\n\nKokeile itse · Tehtävä 2\nPiirrä diastolinen verenpaine (dias) histogrammina. Aseta pylväiden leveydeksi 5 mmHg.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(dias)) +\n  geom_histogram(binwidth = 5)",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#lukumäärät-ja-osuudet",
+    "href": "paiva1/koodiesimerkit.html#lukumäärät-ja-osuudet",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Lukumäärät ja osuudet",
+    "text": "Lukumäärät ja osuudet\ngeom_bar() laskee ryhmien lukumäärät. Valinnalla position = \"fill\" kunkin pylvään kokonaiskorkeus on yksi.\n\nggplot(news, aes(oxygen)) +\n  geom_bar()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(oxygen, colour = outcome)) +\n  geom_bar()\n\n\nggplot(news, aes(oxygen, fill = outcome)) +\n  geom_bar()\n\n\nggplot(news, aes(oxygen, fill = outcome)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\nggplot(news, aes(risk, fill = outcome)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\nRinnakkaiset pylväät ovat lisäesimerkki.\n\nggplot(news, aes(risk, fill = outcome)) +\n  geom_bar(position = \"dodge\")",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#laatikkokuviot",
+    "href": "paiva1/koodiesimerkit.html#laatikkokuviot",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Laatikkokuviot",
+    "text": "Laatikkokuviot\nVertaa sykkeen jakaumaa eri ryhmissä. Lisää yksittäiset havainnot ja tarkista ryhmäkoot.\n\nggplot(news, aes(outcome, pulse)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(risk, pulse)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(avpu, pulse)) +\n  geom_boxplot()\n\n\nggplot(news, aes(avpu, pulse)) +\n  geom_boxplot() +\n  geom_jitter(width = 0.2, height = 0)\n\n\n\n\n\n\n\n\n\ncount(news, avpu)\n\n#&gt; # A tibble: 4 × 2\n#&gt;   avpu      n\n#&gt;   &lt;fct&gt; &lt;int&gt;\n#&gt; 1 A       968\n#&gt; 2 V         3\n#&gt; 3 P        19\n#&gt; 4 U        10\n\n\n\nKokeile itse · Tehtävä 3\nPiirrä lämpötila (temp) NEWS-ryhmittäin (risk) laatikkokuviona.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(risk, temp)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\nKokeile itse · Tehtävä 4\nPiirrä kuolleiden osuus tajunnantason (avpu) mukaan. Tarkista, kuinka monesta havainnosta V-ryhmän osuus on laskettu.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(avpu, fill = outcome)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\nnews |&gt;\n  filter(avpu == \"V\") |&gt;\n  count(outcome)\n\n#&gt; # A tibble: 2 × 2\n#&gt;   outcome      n\n#&gt;   &lt;fct&gt;    &lt;int&gt;\n#&gt; 1 Survived     2\n#&gt; 2 Died         1\n\n\nV-ryhmässä kuoli yksi kolmesta.",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#lisäesimerkit-muoto-koko-osuus-ja-paneelit",
+    "href": "paiva1/koodiesimerkit.html#lisäesimerkit-muoto-koko-osuus-ja-paneelit",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Lisäesimerkit · Muoto, koko, osuus ja paneelit",
+    "text": "Lisäesimerkit · Muoto, koko, osuus ja paneelit\nKokeile pisteiden siirtämistä, muotoa ja kokoa. Piirrä kuolleiden osuutta kuvaava käyrä tai jaa havaintoja paneeleihin.\n\nggplot(news, aes(resp, sat)) +\n  geom_point()\n\n\nggplot(news, aes(resp, sat)) +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(resp, sat, shape = oxygen)) +\n  geom_jitter()\n\n\nggplot(news, aes(pulse, syst,\n                 colour = outcome,\n                 size = NEWS)) +\n  geom_point(alpha = 0.5)\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, died)) +\n  geom_point() +\n  geom_smooth()\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst)) +\n  geom_point() +\n  facet_wrap(vars(risk))",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#viimeistely-ja-tallennus",
+    "href": "paiva1/koodiesimerkit.html#viimeistely-ja-tallennus",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Viimeistely ja tallennus",
+    "text": "Viimeistely ja tallennus\nLisää akselien nimet, otsikko ja lähde. Vaihda teema ja aja tallennuskomento omassa Positron-istunnossasi heti kuvaajan piirtämisen jälkeen.\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Age (years)\",\n    y = \"Systolic blood pressure (mmHg)\"\n  )\n\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Age (years)\",\n    y = \"Systolic blood pressure (mmHg)\",\n    colour = \"Sex\",\n    title = \"Age and systolic blood pressure\",\n    subtitle = \"Synthetic hospital data\",\n    caption = \"Source: NHSRdatasets\"\n  )\n\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Age (years)\",\n    y = \"Systolic blood pressure (mmHg)\",\n    colour = \"Sex\",\n    title = \"Age and systolic blood pressure\",\n    subtitle = \"Synthetic hospital data\",\n    caption = \"Source: NHSRdatasets\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nggsave(\n  \"age_syst.png\",\n  width = 7, height = 5, dpi = 300\n)\n\n\nKokeile itse · Tehtävä 5\nPiirrä ikäjakauma eloonjääneille ja kuolleille tiheyskuvaajana. Lisää otsikko ja akselien nimet, vaihda teema ja tallenna kuva.\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\n\nggplot(news, aes(age, fill = outcome)) +\n  geom_density(alpha = 0.4) +\n  labs(\n    x = \"Age (years)\",\n    y = \"Density\",\n    fill = \"Outcome\",\n    title = \"Age distribution by outcome\",\n    subtitle = \"Synthetic teaching data\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nggsave(\n  \"age_distribution.png\",\n  width = 7, height = 5, dpi = 300\n)\n\n\n\n\n\n\nLisäesimerkit · Värit\n\nggplot(news, aes(age, syst, colour = sex)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(\n    x = \"Age (years)\",\n    y = \"Systolic blood pressure (mmHg)\",\n    colour = \"Sex\",\n    title = \"Age and systolic blood pressure\",\n    subtitle = \"Synthetic hospital data\",\n    caption = \"Source: NHSRdatasets\"\n  ) +\n  theme_minimal() +\n  scale_colour_manual(\n    values = c(\n      Female = \"#E69F00\",\n      Male = \"#0072B2\"\n    )\n  )\n\n\n\n\n\n\n\n\n\nggplot(news, aes(risk, fill = outcome)) +\n  geom_bar(position = \"fill\") +\n  labs(y = \"Proportion\") +\n  scale_fill_brewer(palette = \"Set2\")\n\n\n\n\n\n\n\n\n\nggplot(news, aes(age, syst, colour = NEWS)) +\n  geom_point() +\n  scale_colour_viridis_c()",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
+    "objectID": "paiva1/koodiesimerkit.html#arvaa-koodi",
+    "href": "paiva1/koodiesimerkit.html#arvaa-koodi",
+    "title": "Päivä 1 · Luennon koodiesimerkit",
+    "section": "Arvaa koodi",
+    "text": "Arvaa koodi\nKatso kuvaajaa ja mieti, millä koodilla tekisit sen. Avaa mallikoodi yrityksen jälkeen.\n\n1 · Ikäjakauma\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(age)) +\n  geom_histogram(binwidth = 10)\n\n\n\n\n\n2 · Tajunnantason luokat\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(avpu)) +\n  geom_bar()\n\n\n\n\n\n3 · Hengitystaajuus ja happisaturaatio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(resp, sat)) +\n  geom_point(alpha = 0.2)\n\n\n\n\n\n4 · NEWS kuolleilla ja eloonjääneillä\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(outcome, NEWS)) +\n  geom_boxplot()\n\n\n\n\n\n5 · NEWS-ryhmät ja lisähappi\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(risk, fill = oxygen)) +\n  geom_bar()\n\n\n\n\n\n6 · Lämpötilan jakauma\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(temp, fill = outcome)) +\n  geom_density(alpha = 0.5)\n\n\n\n\n\n7 · Syke ja verenpaine\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(pulse, syst, colour = NEWS)) +\n  geom_point()\n\n\n\n\n\n8 · Saturaatio ilman lisähappea ja lisähapella\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(sat)) +\n  geom_bar() +\n  facet_wrap(vars(oxygen))\n\n\n\n\n\n9 · Ikä ja NEWS sukupuolittain\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(age, NEWS)) +\n  geom_jitter(alpha = 0.3) +\n  facet_wrap(vars(sex))\n\n\n\n\n\n10 · Viimeistelty kuva\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHuomautusMallikoodi\n\n\n\n\n\nggplot(news, aes(NEWS, fill = outcome)) +\n  geom_bar() +\n  labs(\n    x = \"NEWS\",\n    y = \"Patients\",\n    fill = \"Outcome\"\n  ) +\n  theme_minimal()",
+    "crumbs": [
+      "Päivä 1 · Työympäristö ja kuvaajat",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivä 1 · Luennon koodiesimerkit</span>"
+    ]
+  },
+  {
     "objectID": "tulossa.html",
     "href": "tulossa.html",
     "title": "Päivät 2–5",
@@ -156,7 +288,7 @@
     "text": "Seuraavien päivien luvut ilmestyvät tähän kirjaan sitä mukaa kuin opetus etenee. Osoite pysyy samana, joten tallenna se kirjanmerkiksi.\n\n\n\n\nAihe\n\n\n\n\nPäivä 2\nAineiston siivoaminen, muokkaaminen ja yhdistäminen\n\n\nPäivä 3\nAineiston kuvailu ja ryhmien vertailu\n\n\nPäivä 4\nUsean tekijän huomiointi ja logistinen regressio\n\n\nPäivä 5\nKoko analyysi alusta loppuun ja päivittyvä raportti\n\n\n\nSisältö on alustava ja tarkentuu kurssin edetessä.\nJokaiselle päivälle tulee oma aloitussivu, jolta lataat päivän muistikirjan. Uuden päivän tiedosto ei korvaa aiempia: paiva1.qmd, paiva2.qmd ja niin edelleen ovat samassa kurssikansiossa rinnakkain.",
     "crumbs": [
       "Seuraavat päivät",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Päivät 2–5</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Päivät 2–5</span>"
     ]
   },
   {

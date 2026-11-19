@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/index.html</loc>
-    <lastmod>2026-11-17T20:42:14.236Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/index.html</loc>
+    <lastmod>2026-11-19T09:54:00.170Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/ennen-kurssia.html</loc>
-    <lastmod>2026-11-17T20:42:14.236Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/ennen-kurssia.html</loc>
+    <lastmod>2026-11-19T09:54:00.170Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/paiva1/index.html</loc>
-    <lastmod>2026-11-17T20:42:14.238Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/paiva1/index.html</loc>
+    <lastmod>2026-11-19T09:54:00.170Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/tulossa.html</loc>
-    <lastmod>2026-11-17T20:42:14.238Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/paiva1/koodiesimerkit.html</loc>
+    <lastmod>2026-11-19T09:54:00.171Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/lataukset.html</loc>
-    <lastmod>2026-11-17T20:42:14.238Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/tulossa.html</loc>
+    <lastmod>2026-11-19T09:54:00.172Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/liitteet/nappaimet.html</loc>
-    <lastmod>2026-11-17T20:42:14.239Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/lataukset.html</loc>
+    <lastmod>2026-11-19T09:54:00.172Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/liitteet/virheet.html</loc>
-    <lastmod>2026-11-17T20:42:14.240Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/liitteet/nappaimet.html</loc>
+    <lastmod>2026-11-19T09:54:00.173Z</lastmod>
   </url>
   <url>
-    <loc>https://finnemakatemia.github.io/r-kurssi/liitteet/projektit.html</loc>
-    <lastmod>2026-11-17T20:42:14.240Z</lastmod>
+    <loc>https://rkurssi.anssisaviluoto.com/liitteet/virheet.html</loc>
+    <lastmod>2026-11-19T09:54:00.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rkurssi.anssisaviluoto.com/liitteet/projektit.html</loc>
+    <lastmod>2026-11-19T09:54:00.173Z</lastmod>
   </url>
 </urlset>

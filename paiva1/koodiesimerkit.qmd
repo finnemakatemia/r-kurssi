@@ -1,0 +1,793 @@
+# Päivä 1 · Luennon koodiesimerkit {#paiva1-koodiesimerkit}
+
+Pidä [oma muistikirjasi](index.qmd) auki Positronissa. Demokoodi etenee luennon järjestyksessä. Harjoittele omassa tiedostossasi ja avaa mallikoodi vasta oman kokeilun jälkeen.
+
+```{r}
+#| include: false
+options(width = 78)
+set.seed(2026)
+```
+
+## Konsoli ja Quarto
+
+Laske sokki-indeksi konsolissa. Tallenna seuraavaksi arvot nimillä ja käytä niitä laskussa.
+
+```{r}
+#| label: R1
+110 / 85
+```
+
+```{r}
+#| label: R2
+syke <- 110
+systolinen <- 85
+syke / systolinen
+```
+
+```{r}
+#| label: R3
+sykkeet <- c(72, 88, 110, 95)
+mean(sykkeet)
+```
+
+Avaa ohje Positronin **Help**-paneeliin.
+
+```{r}
+#| label: R4
+#| eval: false
+?mean
+```
+
+### Kokeile itse · Koodisolu ja Preview
+
+Tallenna sykearvo 110 ja systolinen paine 85 koodisoluun. Laske sokki-indeksi, kirjoita tuloksesta muistiinpano solun alle ja avaa **Preview**.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| ref.label: R2
+#| eval: false
+```
+:::
+
+## Paketit ja aineisto
+
+Aja oman muistikirjasi valmistelusolu ennen esimerkkejä. Se lataa tidyverse-paketit ja luo muuttujan `news` NHSRdatasets-paketin synteettisestä aineistosta.
+
+```{r}
+#| label: paiva1-valmistelu
+# Synteettisen opetusaineiston valmistelu. Muokkaukset opetetaan päivänä 2.
+library(tidyverse)
+
+news <- NHSRdatasets::synthetic_news_data |>
+  mutate(
+    sex = factor(male, levels = 0:1,
+                 labels = c("Female", "Male")),
+    oxygen = factor(sup, levels = 0:1,
+                    labels = c("Room air", "Oxygen")),
+    avpu = factor(alert, levels = 0:3,
+                  labels = c("A", "V", "P", "U")),
+    outcome = factor(died, levels = 0:1,
+                     labels = c("Survived", "Died")),
+    risk = cut(NEWS, breaks = c(-Inf, 4, 6, Inf),
+               labels = c("Low (0-4)", "Medium (5-6)",
+                          "High (7+)"))
+  ) |>
+  select(age, sex, NEWS, risk, resp, sat, oxygen,
+         syst, dias, pulse, temp, avpu, died, outcome)
+```
+
+Tutki rivejä, sarakkeiden tyyppejä, tunnuslukuja ja ryhmäkokoja.
+
+```{r}
+#| label: V1
+news
+```
+
+```{r}
+#| label: V2
+glimpse(news)
+```
+
+```{r}
+#| label: V3
+summary(news)
+```
+
+```{r}
+#| label: V4
+count(news, risk)
+```
+
+Avaa aineisto Positronin taulukkonäkymään.
+
+```{r}
+#| label: V5
+#| eval: false
+View(news)
+```
+
+### Kokeile itse · Tutustu aineistoon
+
+Laske luokkamuuttujat, selvitä lisähappea saaneiden määrä ja etsi ikäjakauman pienin ja suurin arvo.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+glimpse(news)
+count(news, oxygen)
+summary(news$age)
+```
+
+Aineistossa on viisi luokkamuuttujaa. Lisähappea sai 123 potilasta. Iät ovat 17–102 vuotta.
+:::
+
+## Ensimmäinen hajontakuva
+
+**Aineisto.** Kerro ggplot2:lle, mistä aineistosta kuva piirretään.
+
+```{r}
+#| label: A1
+ggplot(data = news)
+```
+
+**Akselit.** Liitä ikä x-akselille ja systolinen verenpaine y-akselille.
+
+```{r}
+#| label: A2
+ggplot(data = news, aes(x = age, y = syst))
+```
+
+**Pisteet.** Lisää `geom_point()`. Lyhyemmässä muodossa argumenttien nimet voi jättää pois.
+
+```{r}
+#| label: A3
+#| fig-alt: 'Iän ja systolisen verenpaineen hajontakuva.'
+ggplot(data = news, aes(x = age, y = syst)) +
+  geom_point()
+```
+
+```{r}
+#| label: A4
+#| fig-show: hide
+ggplot(news, aes(age, syst)) +
+  geom_point()
+```
+
+### Kokeile itse · Vaihda y-akselin muuttuja
+
+Piirrä ikä ja systolinen verenpaine. Vaihda sitten y-akselille syke.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+ggplot(news, aes(age, pulse)) +
+  geom_point()
+```
+:::
+
+## Väri, läpinäkyvyys ja suora
+
+Väritä pisteet muuttujan mukaan tai anna kaikille sama väri. Säädä läpinäkyvyyttä ja vertaa tasoitettua käyrää suoraan.
+
+```{r}
+#| label: B1
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point()
+```
+
+```{r}
+#| label: B2
+ggplot(news, aes(age, syst, colour = NEWS)) +
+  geom_point()
+```
+
+```{r}
+#| label: B3
+#| fig-show: hide
+ggplot(news, aes(age, syst)) +
+  geom_point(colour = "steelblue")
+```
+
+```{r}
+#| label: B4
+#| fig-show: hide
+ggplot(
+  news,
+  aes(age, syst, colour = "steelblue")
+) +
+  geom_point()
+```
+
+```{r}
+#| label: B5
+#| fig-show: hide
+ggplot(news, aes(age, syst)) +
+  geom_point(
+    colour = "steelblue",
+    alpha = 0.3
+  )
+```
+
+```{r}
+#| label: C1
+ggplot(news, aes(age, syst)) +
+  geom_point() +
+  geom_smooth()
+```
+
+```{r}
+#| label: C2
+ggplot(news, aes(age, syst)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+### Lisäesimerkit · Ryhmittely ja zoomaus
+
+```{r}
+#| label: C3
+#| fig-show: hide
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+#| label: C4
+ggplot(news, aes(age, syst)) +
+  geom_point(aes(colour = sex)) +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+#| label: C5
+#| fig-show: hide
+ggplot(news, aes(age, syst)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  coord_cartesian(ylim = c(100, 150))
+```
+
+```{r}
+#| label: C6
+ggplot(news, aes(age, syst)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  ylim(100, 150)
+```
+
+### Kokeile itse · Tehtävä 1
+
+Piirrä ikä ja syke hajontakuvana. Väritä pisteet lisähapen (`oxygen`) mukaan.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| label: T1
+ggplot(news, aes(age, pulse, colour = oxygen)) +
+  geom_point()
+```
+:::
+
+## Jakaumat
+
+Säädä histogrammin pylvään leveyttä ja vertaile ryhmiä. Tiheyskuvaaja näyttää jakauman tasoitettuna.
+
+```{r}
+#| label: D1
+#| fig-show: hide
+ggplot(news, aes(age)) +
+  geom_histogram()
+```
+
+```{r}
+#| label: D2
+ggplot(news, aes(age)) +
+  geom_histogram(binwidth = 5)
+```
+
+```{r}
+#| label: D3
+#| fig-show: hide
+ggplot(news, aes(age)) +
+  geom_histogram(binwidth = 5, colour = "white")
+```
+
+```{r}
+#| label: D4
+ggplot(news, aes(age, fill = sex)) +
+  geom_histogram(binwidth = 5, colour = "white")
+```
+
+```{r}
+#| label: D5
+#| fig-show: hide
+ggplot(news, aes(age, fill = sex)) +
+  geom_density()
+```
+
+```{r}
+#| label: D6
+ggplot(news, aes(age, fill = sex)) +
+  geom_density(alpha = 0.4)
+```
+
+### Kokeile itse · Tehtävä 2
+
+Piirrä diastolinen verenpaine (`dias`) histogrammina. Aseta pylväiden leveydeksi 5 mmHg.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| label: T2
+ggplot(news, aes(dias)) +
+  geom_histogram(binwidth = 5)
+```
+:::
+
+## Lukumäärät ja osuudet
+
+`geom_bar()` laskee ryhmien lukumäärät. Valinnalla `position = "fill"` kunkin pylvään kokonaiskorkeus on yksi.
+
+```{r}
+#| label: E1
+ggplot(news, aes(oxygen)) +
+  geom_bar()
+```
+
+```{r}
+#| label: E2
+#| fig-show: hide
+ggplot(news, aes(oxygen, colour = outcome)) +
+  geom_bar()
+```
+
+```{r}
+#| label: E3
+#| fig-show: hide
+ggplot(news, aes(oxygen, fill = outcome)) +
+  geom_bar()
+```
+
+```{r}
+#| label: E4
+ggplot(news, aes(oxygen, fill = outcome)) +
+  geom_bar(position = "fill")
+```
+
+```{r}
+#| label: E5
+ggplot(news, aes(risk, fill = outcome)) +
+  geom_bar(position = "fill")
+```
+
+Rinnakkaiset pylväät ovat lisäesimerkki.
+
+```{r}
+#| label: E6
+ggplot(news, aes(risk, fill = outcome)) +
+  geom_bar(position = "dodge")
+```
+
+## Laatikkokuviot
+
+Vertaa sykkeen jakaumaa eri ryhmissä. Lisää yksittäiset havainnot ja tarkista ryhmäkoot.
+
+```{r}
+#| label: F1
+ggplot(news, aes(outcome, pulse)) +
+  geom_boxplot()
+```
+
+```{r}
+#| label: F2
+ggplot(news, aes(risk, pulse)) +
+  geom_boxplot()
+```
+
+```{r}
+#| label: F3
+#| fig-show: hide
+ggplot(news, aes(avpu, pulse)) +
+  geom_boxplot()
+```
+
+```{r}
+#| label: F4
+ggplot(news, aes(avpu, pulse)) +
+  geom_boxplot() +
+  geom_jitter(width = 0.2, height = 0)
+```
+
+```{r}
+count(news, avpu)
+```
+
+### Kokeile itse · Tehtävä 3
+
+Piirrä lämpötila (`temp`) NEWS-ryhmittäin (`risk`) laatikkokuviona.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| label: T3
+ggplot(news, aes(risk, temp)) +
+  geom_boxplot()
+```
+:::
+
+### Kokeile itse · Tehtävä 4
+
+Piirrä kuolleiden osuus tajunnantason (`avpu`) mukaan. Tarkista, kuinka monesta havainnosta V-ryhmän osuus on laskettu.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| label: T4
+ggplot(news, aes(avpu, fill = outcome)) +
+  geom_bar(position = "fill")
+```
+
+```{r}
+news |>
+  filter(avpu == "V") |>
+  count(outcome)
+```
+
+V-ryhmässä kuoli yksi kolmesta.
+:::
+
+## Lisäesimerkit · Muoto, koko, osuus ja paneelit
+
+Kokeile pisteiden siirtämistä, muotoa ja kokoa. Piirrä kuolleiden osuutta kuvaava käyrä tai jaa havaintoja paneeleihin.
+
+```{r}
+#| label: G1
+#| fig-show: hide
+ggplot(news, aes(resp, sat)) +
+  geom_point()
+```
+
+```{r}
+#| label: G2
+ggplot(news, aes(resp, sat)) +
+  geom_jitter()
+```
+
+```{r}
+#| label: G3
+#| fig-show: hide
+ggplot(news, aes(resp, sat, shape = oxygen)) +
+  geom_jitter()
+```
+
+```{r}
+#| label: G5
+ggplot(news, aes(pulse, syst,
+                 colour = outcome,
+                 size = NEWS)) +
+  geom_point(alpha = 0.5)
+```
+
+```{r}
+#| label: H2
+ggplot(news, aes(age, died)) +
+  geom_point() +
+  geom_smooth()
+```
+
+```{r}
+#| label: I1
+ggplot(news, aes(age, syst)) +
+  geom_point() +
+  facet_wrap(vars(risk))
+```
+
+## Viimeistely ja tallennus
+
+Lisää akselien nimet, otsikko ja lähde. Vaihda teema ja aja tallennuskomento omassa Positron-istunnossasi heti kuvaajan piirtämisen jälkeen.
+
+```{r}
+#| label: J1
+#| fig-show: hide
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+#| label: J2
+#| fig-show: hide
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Age (years)",
+    y = "Systolic blood pressure (mmHg)"
+  )
+```
+
+```{r}
+#| label: J3
+#| fig-show: hide
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Age (years)",
+    y = "Systolic blood pressure (mmHg)",
+    colour = "Sex",
+    title = "Age and systolic blood pressure",
+    subtitle = "Synthetic hospital data",
+    caption = "Source: NHSRdatasets"
+  )
+```
+
+```{r}
+#| label: J4
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Age (years)",
+    y = "Systolic blood pressure (mmHg)",
+    colour = "Sex",
+    title = "Age and systolic blood pressure",
+    subtitle = "Synthetic hospital data",
+    caption = "Source: NHSRdatasets"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+#| label: J5
+#| eval: false
+ggsave(
+  "age_syst.png",
+  width = 7, height = 5, dpi = 300
+)
+```
+
+### Kokeile itse · Tehtävä 5
+
+Piirrä ikäjakauma eloonjääneille ja kuolleille tiheyskuvaajana. Lisää otsikko ja akselien nimet, vaihda teema ja tallenna kuva.
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+```{r}
+#| label: T5
+ggplot(news, aes(age, fill = outcome)) +
+  geom_density(alpha = 0.4) +
+  labs(
+    x = "Age (years)",
+    y = "Density",
+    fill = "Outcome",
+    title = "Age distribution by outcome",
+    subtitle = "Synthetic teaching data"
+  ) +
+  theme_minimal()
+```
+
+```{r}
+#| label: T5b
+#| eval: false
+ggsave(
+  "age_distribution.png",
+  width = 7, height = 5, dpi = 300
+)
+```
+:::
+
+### Lisäesimerkit · Värit
+
+```{r}
+#| label: J6
+ggplot(news, aes(age, syst, colour = sex)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    x = "Age (years)",
+    y = "Systolic blood pressure (mmHg)",
+    colour = "Sex",
+    title = "Age and systolic blood pressure",
+    subtitle = "Synthetic hospital data",
+    caption = "Source: NHSRdatasets"
+  ) +
+  theme_minimal() +
+  scale_colour_manual(
+    values = c(
+      Female = "#E69F00",
+      Male = "#0072B2"
+    )
+  )
+```
+
+```{r}
+#| label: J7
+ggplot(news, aes(risk, fill = outcome)) +
+  geom_bar(position = "fill") +
+  labs(y = "Proportion") +
+  scale_fill_brewer(palette = "Set2")
+```
+
+```{r}
+#| label: J8
+ggplot(news, aes(age, syst, colour = NEWS)) +
+  geom_point() +
+  scale_colour_viridis_c()
+```
+
+## Arvaa koodi
+
+Katso kuvaajaa ja mieti, millä koodilla tekisit sen. Avaa mallikoodi yrityksen jälkeen.
+
+### 1 · Ikäjakauma
+
+```{r}
+#| label: Q1
+#| echo: false
+ggplot(news, aes(age)) +
+  geom_histogram(binwidth = 10)
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(age)) +
+  geom_histogram(binwidth = 10)
+```
+:::
+
+### 2 · Tajunnantason luokat
+
+```{r}
+#| label: Q2
+#| echo: false
+ggplot(news, aes(avpu)) +
+  geom_bar()
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(avpu)) +
+  geom_bar()
+```
+:::
+
+### 3 · Hengitystaajuus ja happisaturaatio
+
+```{r}
+#| label: Q3
+#| echo: false
+ggplot(news, aes(resp, sat)) +
+  geom_point(alpha = 0.2)
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(resp, sat)) +
+  geom_point(alpha = 0.2)
+```
+:::
+
+### 4 · NEWS kuolleilla ja eloonjääneillä
+
+```{r}
+#| label: Q4
+#| echo: false
+ggplot(news, aes(outcome, NEWS)) +
+  geom_boxplot()
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(outcome, NEWS)) +
+  geom_boxplot()
+```
+:::
+
+### 5 · NEWS-ryhmät ja lisähappi
+
+```{r}
+#| label: Q5
+#| echo: false
+ggplot(news, aes(risk, fill = oxygen)) +
+  geom_bar()
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(risk, fill = oxygen)) +
+  geom_bar()
+```
+:::
+
+### 6 · Lämpötilan jakauma
+
+```{r}
+#| label: Q6
+#| echo: false
+ggplot(news, aes(temp, fill = outcome)) +
+  geom_density(alpha = 0.5)
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(temp, fill = outcome)) +
+  geom_density(alpha = 0.5)
+```
+:::
+
+### 7 · Syke ja verenpaine
+
+```{r}
+#| label: Q7
+#| echo: false
+ggplot(news, aes(pulse, syst, colour = NEWS)) +
+  geom_point()
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(pulse, syst, colour = NEWS)) +
+  geom_point()
+```
+:::
+
+### 8 · Saturaatio ilman lisähappea ja lisähapella
+
+```{r}
+#| label: Q8
+#| echo: false
+ggplot(news, aes(sat)) +
+  geom_bar() +
+  facet_wrap(vars(oxygen))
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(sat)) +
+  geom_bar() +
+  facet_wrap(vars(oxygen))
+```
+:::
+
+### 9 · Ikä ja NEWS sukupuolittain
+
+```{r}
+#| label: Q9
+#| echo: false
+ggplot(news, aes(age, NEWS)) +
+  geom_jitter(alpha = 0.3) +
+  facet_wrap(vars(sex))
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(age, NEWS)) +
+  geom_jitter(alpha = 0.3) +
+  facet_wrap(vars(sex))
+```
+:::
+
+### 10 · Viimeistelty kuva
+
+```{r}
+#| label: Q10
+#| echo: false
+ggplot(news, aes(NEWS, fill = outcome)) +
+  geom_bar() +
+  labs(
+    x = "NEWS",
+    y = "Patients",
+    fill = "Outcome"
+  ) +
+  theme_minimal()
+```
+
+::: {.callout-note collapse="true" title="Mallikoodi"}
+``` r
+ggplot(news, aes(NEWS, fill = outcome)) +
+  geom_bar() +
+  labs(
+    x = "NEWS",
+    y = "Patients",
+    fill = "Outcome"
+  ) +
+  theme_minimal()
+```
+:::
+
+<!-- Luotu automaattisesti kirjan lähteistä. Muutokset tehdään lähdetiedostoon. -->
